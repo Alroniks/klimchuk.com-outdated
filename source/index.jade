@@ -5,80 +5,43 @@ html(lang="en")
         title= "Home - Ivan Klimchuk"
         meta(content="", name="keywords")
         meta(content="", name="description")
+
         meta(property="og:title", content="Home")
         meta(property="og:site_name", content="")
         meta(property="og:url", content="")
         meta(property="og:description", content="")
+
         meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        base(href="http://klimchuk.com/")
+        base(href="/")
         link(rel='stylesheet', href='css/app.css', type='text/css')
 
         script(src='http://localhost:35729/livereload.js')
-        script(type="text/javascript", src="http://code.jquery.com/jquery-2.0.3.min.js")
+        script(type="text/javascript", src="../bower_components/jquery/jquery.js")
     body
-        header
-            div.rowest
-                h1
-                    a(href="/") Ivan Klimchuk
-                    sup
-                        a(href="http://klimchuk.by/") по-русски
-                nav
-                    menu
-                        li
-                            a(href="http://klimchuk.com/blog") Blog
-                        li
-                            a(href="http://klimchuk.com/projects/") Projects
-                        li
-                            a(href="http://klimchuk.com/contacts") Contacts 
-                        li
-                            a(href="http://klimchuk.com/modx-ambassador") MODX Ambassador
-                br(clear="both")
-                div.about
-                    p
-                        | Hi! My name is Ivan. Last five years I work as PHP developer at different companies. At now I am a free developer-entrepreneur enthusiastic of MODX. I am MODX Ambassador in Belarus and in his spare time I am doing the project <a href="http://modx.by" target="_blank">MODX Belarus</a> and help to other developer and users to work succesfully with this great CMS.
-
-        section.works
-            div.row
-                div.projects
-                    ul
-                        li
-                        li
-                        li
-                div.sites
-                    hgroup
-                        h2 Last Works
-                        a.more(href="#") Other works
-                    br(clear="both")
-                    ul
-                        li
-                            div.site
-                                img(src="http://static.klimchuk.com/img/1.png", alt="")
-                                h2
-                                    a(href="http://static.klimchuk.com/img/1.png") Проект MODX Belarus
-                                p.description 
-                                    | дизайн, верстка, программирование, управление и многое другое
-                        li
-                            div.site
-                                img(src="http://static.klimchuk.com/img/2.png", alt="")
-                                h2
-                                    a(href="http://static.klimchuk.com/img/2.png") Интернет-магазин eMALL.by
-                                p.description
-                                    | верстка, программирование
-                        li
-                            div.site
-                                img(src="http://static.klimchuk.com/img/3.png", alt="")
-                                h2
-                                    a(href="#") Фотограф Ольга Пронина
-                                p.description
-                                    | дизайн, верстка, программирование
-                        li
-                            div.site
-                                img(src="http://static.klimchuk.com/img/4.png", alt="")
-                                h2
-                                    a(href="#") Крановые панели Dvesta</a></h2>
-                                p.description
-                                    | программирование
+        nav(role="navigation").navbar.navbar-default
+            .navbar-header
+                button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a(href="/" ).navbar-brand Ivan Klimchuk
+            .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav 
+                    li: a(href="#") по-русски
+                ul.nav.navbar-nav.navbar-right
+                    li: a(href="about.html") About Me
+                    li: a(href="blog.html") Blog
+                    li: a(href="projects.html") Projects
+                    li: a(href="modx-ambassador.html") MODX Ambassador
+        .jumbotron
+            .container
+                h1 Hello, my name is Ivan Klimchuk!
+                p Hi! My name is Ivan. Last five years I work as PHP developer at different companies. At now I am a free developer-entrepreneur enthusiastic of MODX. I am MODX Ambassador in Belarus and in his spare time I am doing the project <a href="http://modx.by" target="_blank">MODX Belarus</a> and help to other developer and users to work succesfully with this great CMS.
+        .container
+            .row
+                123
         section.recent
             div.row
                 div.latest
