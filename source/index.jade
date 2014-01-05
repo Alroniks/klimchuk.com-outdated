@@ -19,109 +19,88 @@ html(lang="en")
         script(src='http://localhost:35729/livereload.js')
         script(type="text/javascript", src="../bower_components/jquery/jquery.js")
     body
-        nav(role="navigation").navbar.navbar-default
-            .navbar-header
-                button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a(href="/" ).navbar-brand Ivan Klimchuk
-            .collapse.navbar-collapse.navbar-ex1-collapse
-                ul.nav.navbar-nav 
-                    li: a(href="#") по-русски
-                ul.nav.navbar-nav.navbar-right
-                    li: a(href="about.html") About Me
-                    li: a(href="blog.html") Blog
-                    li: a(href="projects.html") Projects
-                    li: a(href="modx-ambassador.html") MODX Ambassador
+        .container
+            .row
+                nav(role="navigation").navbar
+                    .navbar-header
+                        button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a(href="/" ).navbar-brand Ivan Klimchuk
+                    .collapse.navbar-collapse.navbar-ex1-collapse
+                        ul.nav.navbar-nav 
+                            li: a(href="#") по-русски
+                        ul.nav.navbar-nav.navbar-right
+                            li: a(href="about.html") About Me
+                            li: a(href="blog.html") Blog
+                            li: a(href="projects.html") Projects
+                            li: a(href="modx-ambassador.html") MODX Ambassador
         .jumbotron
             .container
                 h1 Hello, my name is Ivan Klimchuk!
                 p Hi! My name is Ivan. Last five years I work as PHP developer at different companies. At now I am a free developer-entrepreneur enthusiastic of MODX. I am MODX Ambassador in Belarus and in his spare time I am doing the project <a href="http://modx.by" target="_blank">MODX Belarus</a> and help to other developer and users to work succesfully with this great CMS.
-        .container
+        .container.recent
             .row
-                123
-        section.recent
-            div.row
-                div.latest
-                    hgroup
-                        h2 Blog Updates
-                        a.more(href="/blog") Read the Blog
-                    br(clear="left")
-                    ul.posts
-                        li
-                            time 20 august 2013, 15:21
-                            h3
-                                a(href="http://klimchuk.com/blog/modx/developing-an-extras-in-modx-configuring-of-the-environment/") Developing an Extras in MODx: configuring of the environment
-                                div.desc
-                                    | Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
-                        li
-                            time 31 may 2010, 02:03
-                            h3
-                                a(href="http://klimchuk.com/blog/closet/pervaja-zapis-bloga/") The first blog entry
-                                div.desc 
-                                    | Good day, dear users.<br>
-                                    | I want to start a blog by this post.<br>
-                                    | To begin with I would like to tell you what I want to write to your blog and why I do not use ready-made services like LiveJournal and others. And also to tell for whom I write what I write and how often I will write in my blog.
-                    br(clear="left")
-        section.twitter
-            div.row
-                figure
-                    blockquote
-                        a(href="http://twitter.com/wiktar", target="_blank", rel="nofollow") @wiktar 
-                        | покажи линк на гитхаб?
-                    figcaption
-                        a(href="http://twitter.com/iklimchuk", target="_blank") @iklimchuk
-        footer
-            div.row
-                div.column.clients
+                .col-xs-12
+                    h2 Blog Updates
+                        a.more.pull-right(href="#") Read the Blog
+                    .col-xs-12.col-md-4
+                        time 20 august 2013, 15:21
+                        h3: a(href="#") Developing an Extras in MODx: configuring of the environment
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+                    .col-xs-12.col-md-4
+                        time 31 may 2010, 02:03
+                        h3: a(href="#") The first blog entry
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+                    .col-xs-12.col-md-4
+                        time 04 febrary 2013, 13:12
+                        h3: a(href="#") The second blog entry
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+
+        .container.twitter
+            .row
+                .col-xs-12
+                    figure
+                        blockquote
+                            a(href="#", target="_blank", rel="nofollow") @wiktar 
+                            | покажи линк на гитхаб?
+                        figcaption: a(href="#", target="_blank") @iklimchuk
+
+        footer.container
+            .row
+                .col-xs-12.col-sm-6.col-md-2
                     h3 For Clients
-                    ul
-                        li
-                            a(href="http://klimchuk.com/services") Services
-                        li
-                            a(href="http://klimchuk.com/prices") Prices
-                        li
-                            a(href="http://klimchuk.com/contacts") Contacts
-                        li
-                            a(href="http://klimchuk.com/projects/sites") Portfolio
-                div.column.projects
+                    ul.list-unstyled
+                        li: a(href="http://klimchuk.com/services") Services
+                        li: a(href="http://klimchuk.com/prices") Prices
+                        li: a(href="http://klimchuk.com/contacts") Contacts
+                        li: a(href="http://klimchuk.com/projects/sites") Portfolio
+                .col-xs-12.col-sm-6.col-md-3
                     h3 Recent Projects
-                    ul
-                        li
-                            a(href="") Проект MODX.by
-                        li
-                            a(href="") Интернет-магазин EMALL.BY
-                        li
-                            a(href="") ANTINI Interior
-                        li
-                            a(href="") Dvesta - крановые панели
-                div.column.categories
+                    ul.list-unstyled
+                        li: a(href="") Проект MODX.by
+                        li: a(href="") Интернет-магазин EMALL.BY
+                        li: a(href="") ANTINI Interior
+                        li: a(href="") Dvesta - крановые панели
+                .col-xs-12.col-sm-6.col-md-2
                     h3 Blog Headings
-                    ul
-                        li
-                            a(href="http://klimchuk.com/blog/closet/") Closet
-                        li
-                            a(href="http://klimchuk.com/blog/modx/") MODX
-                        li
-                            a(href="http://klimchuk.com/blog/life/") Personal life
-                        li
-                            a(href="http://klimchuk.com/blog/travel/") Travel
-                div.column.reading
+                    ul.list-unstyled
+                        li: a(href="http://klimchuk.com/blog/closet/") Closet
+                        li: a(href="http://klimchuk.com/blog/modx/") MODX
+                        li: a(href="http://klimchuk.com/blog/life/") Personal life
+                        li: a(href="http://klimchuk.com/blog/travel/") Travel
+                .col-xs-12.col-sm-6.col-md-2
                     h3 I am read
-                    ul
-                        li
-                            a(href="http://bezumkin.ru", target="_blank") Vasily Naumkin
-                        li
-                            a(href="http://grinchik.ru", target="_blank") Victor Grinchik
-                        li
-                            a(href="http://thrash.me", target="_blank") Ryan Thrash
-                        li
-                            a(href="http://markhamstra.com", target="_blank") Mark Hamstra
-                div.column.feedback
+                    ul.list-unstyled
+                        li: a(href="http://bezumkin.ru", target="_blank") Vasily Naumkin
+                        li: a(href="http://grinchik.ru", target="_blank") Victor Grinchik
+                        li: a(href="http://thrash.me", target="_blank") Ryan Thrash
+                        li: a(href="http://markhamstra.com", target="_blank") Mark Hamstra
+                .col-xs-12.col-sm-6.col-md-3
                     h3 Fast Contacts
-                    ol
+                    ul.list-unstyled
                         li
                             a(href="")
                                 i.icon.icon-envelop
@@ -134,22 +113,18 @@ html(lang="en")
                             a(href="")
                                 i.icon.icon-phone
                                 | +375 33 638 10 92
-            .friends
+            .row
                 a(href="http://modx.com")
                     img(src="http://klimchuk.com//upload/modx-logo-white-transparent.png", alt="")
                 a(href="https://www.modmore.com/?via=262")
                     img(src="https://assets.modmore.com/img/logo_white.png", alt="Premium Extras & More for MODX®")
                 a(href="http://store.simpledream.ru")
                     img(src="http://klimchuk.com//upload/ssd-logo.png", alt="Store Simple Dream")
-        .copyright
+        .container.copyright
             .row
-                .copy
-                    | &copy;&nbsp;2010&nbsp;&mdash;&nbsp;2014.&nbsp;All rights reserved.
-                ul.links
-                    li
-                        a(href="http://klimchuk.com/sitemap") Sitemap
-                    li
-                        a(href="http://klimchuk.com/privacy") Privacy
-                    li
-                        a(href="http://klimchuk.com/cookie-policy") Cookie Policy
-
+                .col-md-12
+                    pull-left &copy;&nbsp;2010&nbsp;&mdash;&nbsp;2014.&nbsp;All rights reserved.
+                    ul.list-unstyled.list-inline.pull-right
+                        li: a(href="http://klimchuk.com/sitemap") Sitemap
+                        li: a(href="http://klimchuk.com/privacy") Privacy
+                        li: a(href="http://klimchuk.com/cookie-policy") Cookie Policy
