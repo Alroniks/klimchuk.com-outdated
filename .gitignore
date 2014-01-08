@@ -1,2 +1,11 @@
 /node_modules
 /dest
+
+.idea
+.DS_Store
+.iml
+
+htdocs_en
+htdocs_ru
+
+.docpad.db

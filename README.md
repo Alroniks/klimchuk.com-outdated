@@ -1,20 +1,14 @@
-###Инструментарий:
-* jade - препроцессор html;
-* stylus - препроцессор css(nib);
-* connect - сервер приложения;
-* copy - копирование файлов в обход препроцессора;
-* watch - планировщик. Выполняет функцию отслеживания изменений файлов и быстрой компиляции из исходников.
+## Ivan Klimchuk's Site
+* [Russian version](http://klimchuk.by)
+* [English version](http://klimchuk.com)
 
-После этого Вы можете работать в директории `source`.
-Сайт будет доступен по адресу `0.0.0.0:3000`.
+Powered by [DocPad](http://docpad.org/), using [Stylus](http://learnboost.github.io/stylus/), [Jade](http://jade-lang.com/), [Grunt](http://gruntjs.com/)
 
-Готовая верстка хранится в директории `dest`.
+## Run localy
+```
+$ docpad run --env en
+$ docpad run --env ru
+```
 
-###Credits
-* [grunt](https://github.com/gruntjs/grunt)
-* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
-=======
-site-klimchukcom
-================
-
-frontend-sources for klimchuk.com/by
+## License
+You must ask me, if you want use sources of my site for own projects, but you can use it free for studying.

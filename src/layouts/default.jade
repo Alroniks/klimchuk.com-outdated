@@ -1,0 +1,66 @@
+doctype html
+html(lang= site.lang)
+    include partials/head
+    body
+        .container
+            .row
+                nav(role="navigation").navbar
+                    .navbar-header
+                        button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a(href="/" ).navbar-brand Ivan Klimchuk
+                    .collapse.navbar-collapse.navbar-ex1-collapse
+                        ul.nav.navbar-nav 
+                            li: a(href="#") по-русски
+                        ul.nav.navbar-nav.navbar-right
+                            li: a(href="about.html") About Me
+                            li: a(href="blog.html") Blog
+                            li: a(href="projects.html") Projects
+                            li: a(href="modx-ambassador.html") MODX Ambassador
+        .jumbotron
+            .container
+                h1 Hello, my name is Ivan Klimchuk!
+                p Hi! My name is Ivan. Last five years I work as PHP developer at different companies. At now I am a free developer-entrepreneur enthusiastic of MODX. I am MODX Ambassador in Belarus and in his spare time I am doing the project <a href="http://modx.by" target="_blank">MODX Belarus</a> and help to other developer and users to work succesfully with this great CMS.
+        .container.recent
+            .row
+                .col-xs-12
+                    h2 Blog Updates
+                        a.more.pull-right(href="#") Read the Blog
+                    .col-xs-12.col-md-4
+                        time 20 august 2013, 15:21
+                        h3: a(href="#") Developing an Extras in MODx: configuring of the environment
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+                    .col-xs-12.col-md-4
+                        time 31 may 2010, 02:03
+                        h3: a(href="#") The first blog entry
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+                    .col-xs-12.col-md-4
+                        time 04 febrary 2013, 13:12
+                        h3: a(href="#") The second blog entry
+                        .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+
+        .container.twitter
+            .row
+                .col-xs-12
+                    figure
+                        blockquote
+                            a(href="#", target="_blank", rel="nofollow") @wiktar 
+                            | покажи линк на гитхаб?
+                        figcaption: a(href="#", target="_blank") @iklimchuk
+
+        footer.container
+            .row
+                include partials/footer/columns
+            .row
+                include partials/footer/friends
+        .container.copyright
+            .row
+                .col-md-12
+                    pull-left &copy;&nbsp;2010&nbsp;&mdash;&nbsp;2014.&nbsp;All rights reserved.
+                    ul.list-unstyled.list-inline.pull-right
+                        li: a(href="http://klimchuk.com/sitemap") Sitemap
+                        li: a(href="http://klimchuk.com/privacy") Privacy
+                        li: a(href="http://klimchuk.com/cookie-policy") Cookie Policy
