@@ -20,6 +20,9 @@
     "docpad": "~6.59.6",
     "docpad-plugin-jade": "~2.6.2",
     "docpad-plugin-marked": "~2.2.0",
-    "docpad-plugin-partials": "~2.8.1"
+    "docpad-plugin-partials": "~2.8.1",
+    "yamljs": "~0.1.4",
+    "moment": "~2.5.0",
+    "richtypo": "~0.1.8"
   }
 }
