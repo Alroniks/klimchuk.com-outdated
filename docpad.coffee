@@ -21,6 +21,8 @@ docpadConfig = {
     collections:
         posts: (database) ->
             database.findAllLive({relativeOutDirPath: 'all', unpublished: $exists: false}, [date:-1])
+        pages: (database) ->
+            database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
     # =================================
     # Environments
@@ -30,15 +32,22 @@ docpadConfig = {
     environments:
         en:
             documentsPaths: ['data/en']
-            outPath: 'htdocs_en'
+            outPath: 'out/en'
         ru:
             documentsPaths: ['data/ru']
-            outPath: 'htdocs_ru'
+            outPath: 'out/ru'
 
     plugins:
         highlightjs:
             aliases:
                 yaml: 'python'
+        jade:
+            jadeOptions:
+                pretty: true
+                #basedir: process.cwd() + '/src/layouts'
+        partials:
+            partialsPath: process.cwd() + '/src/layouts/partials'
+
 
     events:
         generateBefore: (opts) ->

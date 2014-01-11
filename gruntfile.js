@@ -1,16 +1,16 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    jade: {
-      compile: {
-        files: [{
-          cwd: 'source',
-          src: ['**/*.jade', '!partials/**/*.jade'],
-          dest: 'dest',
-          expand: true,
-          ext: '.html',
-        }]
-      }
-    },
+    // jade: {
+    //   compile: {
+    //     files: [{
+    //       cwd: 'source',
+    //       src: ['**/*.jade', '!partials/**/*.jade'],
+    //       dest: 'dest',
+    //       expand: true,
+    //       ext: '.html',
+    //     }]
+    //   }
+    // },
     stylus: {
       compile: {
         files: [{
@@ -97,7 +97,7 @@ module.exports = function(grunt){
   grunt.registerTask('default', [
     'connect', 
     'copy', 
-    'jade', 
+    // 'jade', 
     'stylus',
     'watch', 
   ]);
