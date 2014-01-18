@@ -1,103 +1,90 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    // jade: {
-    //   compile: {
-    //     files: [{
-    //       cwd: 'source',
-    //       src: ['**/*.jade', '!partials/**/*.jade'],
-    //       dest: 'dest',
-    //       expand: true,
-    //       ext: '.html',
-    //     }]
-    //   }
-    // },
     stylus: {
       compile: {
         files: [{
-          cwd: 'source/css',
+          cwd: 'src/assets/css',
           src: '**/*.styl',
-          dest: 'dest/css',
+          dest: 'src/files/css',
           expand: true,
           ext: '.css',
         }]
       }
     },
     watch: {
-      livereload: {
-        options: {
-          livereload: true
-        },
-        files: ['dest/**/*'],
-      },
       js: {
-        files: ['source/js/**/*.js'],
+        files: ['src/assets/js/**/*.js'],
         tasks: ['copy:js'],
       },
       css: {
-        files: ['source/css/**/*.css'],
+        files: ['src/assets/css/**/*.css'],
         tasks: ['copy:css'],
       },
-      jade: {
-        files: ['source/**/*.jade', '!partials/**/*.jade'],
-        tasks: ['jade'],
-      },
       stylus: {
-        files: ['source/css/**/*.styl'],
+        files: ['src/assets/css/**/*.styl'],
         tasks: ['stylus'],
       },
-      imagemin: {
-        files: ['source/img/**/*.{png,jpg,gif}'],
-        tasks: ['imagemin'],
-      }
+      //imagemin: {
+      //  files: ['source/img/**/*.{png,jpg,gif}'],
+      //  tasks: ['imagemin'],
+      //}
     },
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'source/img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'dest/img/',
-        }]
-      }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 3000,
-          base: 'dest',
-        }
-      }
-    },
+    // imagemin: {
+    //   dynamic: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'source/img/',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: 'dest/img/',
+    //     }]
+    //   }
+    // },
     copy: {
       css: {
         files: [{
-          cwd: 'source/css/',
+          cwd: 'src/assets/css/',
           src: ['**/*.css'],
-          dest: 'dest/css/',
+          dest: 'src/files/css/',
           expand: true,
         }]
       },
       js: {
         files: [{
-          cwd: 'source/js/',
+          cwd: 'src/assets/js/',
           src: ['**/*.js'],
-          dest: 'dest/js/',
+          dest: 'src/files/js/',
           expand: true,
         }]
       },
+      bootstrap: {
+        files: [{
+          cwd: 'bower_components/bootstrap/dist/',
+          src: [
+            'css/**/*.min.css',
+            'js/**/*.min.js',
+            'fonts/**/*'
+          ],
+          dest: 'src/files/vendor/bootstrap/',
+          expand: true
+        }]
+      },
+      jquery: {
+        files: [{
+          cwd: 'bower_components/jquery/',
+          src: ['jquery.min.js'],
+          dest: 'src/files/vendor/jquery/',
+          expand: true
+        }]
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', [
-    'connect', 
     'copy', 
-    // 'jade', 
     'stylus',
     'watch', 
   ]);

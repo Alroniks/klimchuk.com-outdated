@@ -1,5 +1,9 @@
 /node_modules
 /out
+/bower_components
+/src/files/vendor
+/src/files/js
+/src/files/css
 
 .idea
 .DS_Store

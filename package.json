@@ -23,6 +23,7 @@
     "docpad-plugin-partials": "~2.8.1",
     "yamljs": "~0.1.4",
     "moment": "~2.5.0",
-    "richtypo": "~0.1.8"
+    "richtypo": "~0.1.8",
+    "bower": "~1.2.8"
   }
 }
