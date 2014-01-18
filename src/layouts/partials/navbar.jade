@@ -1,18 +1,21 @@
-.container
-    .row
-        nav(role="navigation").navbar
-            .navbar-header
-                button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a(href="/" ).navbar-brand Ivan Klimchuk
-            .collapse.navbar-collapse.navbar-ex1-collapse
-                ul.nav.navbar-nav 
-                    li: a(href="#") по-русски
-                ul.nav.navbar-nav.navbar-right
-                    li: a(href="about.html") About Me
-                    li: a(href="blog.html") Blog
-                    li: a(href="projects.html") Projects
-                    li: a(href="ambassador.html") MODX Ambassador
+header
+    .container
+        .row
+            nav(role="navigation").navbar.navbar-default
+                .navbar-header
+                    button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    h1
+                        a(href="/" ).navbar-brand Ivan Klimchuk
+                .collapse.navbar-collapse.navbar-ex1-collapse
+                    ul.nav.navbar-nav.lang 
+                        li: a(href="#") 
+                            span по-русски
+                    ul.nav.navbar-nav.navbar-right
+                        li: a(href="about.html") About Me
+                        li: a(href="blog.html") Blog
+                        li: a(href="projects.html") Projects
+                        li: a(href="ambassador.html") MODX Ambassador

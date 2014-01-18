@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic');
 
 // variables
 $font-size = 14px
@@ -6,11 +7,14 @@ $color-link-active = #236DD1
 $color-link-hover = #236DD1
 $color-link-visited = #7635FF
 $color-text-base = gray
+$color-text-header = white
 $color-text-unimportant = silver
 $color-text-twitter-user = #ABECFF
 $color-text-twitter-text = white
+$color-bg-header = #559bbf
 $color-bg-twitter = #00ACEE
 $color-bg-footer = #252525
+$color-link-lang = #CAEEFF
 
 $color-footer-text = white
 $color-footer-heading = #EEE
@@ -21,5 +25,64 @@ $color-copy-text = white
 $color-copy-link = white
 $color-copy-link-hover = #AAA
 
+$header-height = 100px;
 
+$font = 'PT Serif', Georgia, serif
 
+body *
+    font-family: $font
+
+header 
+    background-color $color-bg-header
+
+.navbar
+    border none
+    color: $color-text-header
+    margin-bottom 0
+    min-height $header-height
+.navbar-default
+    background-color transparent
+    border-radius 0
+    box-shadow none
+    color $color-text-header
+.navbar-header h1
+    overflow hidden
+    line-height $header-height
+    height $header-height
+    margin 0
+.navbar-brand
+    font-size 48px
+    line-height $header-height
+    float none
+    padding 0 15px
+
+.navbar-default .navbar-brand
+    color $color-text-header
+    &:focus
+    &:hover
+        color $color-text-header
+.navbar-default .navbar-nav *
+    font-family 'PT Sans', sans-serif
+    font-size 18px
+.navbar-default .navbar-nav li a 
+    color $color-text-header
+    &:hover
+        color $color-text-header
+        text-decoration underline
+
+.navbar-nav
+    margin 30px 20px
+    text-transform uppercase
+
+.navbar-nav.lang li a 
+    font-style italic
+    text-transform none
+    font-size 16px
+    color $color-link-lang
+    &:hover
+        text-decoration none
+        color $color-text-header
+.navbar-nav.lang li a span
+    border-bottom 1px dashed 
+    
+    
