@@ -5,7 +5,8 @@ $font-size = 14px
 $color-link-base = #358BFF
 $color-link-active = #236DD1
 $color-link-hover = #236DD1
-$color-link-visited = #7635FF
+//$color-link-visited = #7635FF
+$color-link-visited = #559bbf
 $color-text-base = gray
 $color-text-header = white
 $color-text-unimportant = silver
@@ -14,12 +15,14 @@ $color-text-twitter-text = white
 $color-bg-header = #559bbf
 $color-bg-twitter = #00ACEE
 $color-bg-footer = #252525
+$color-bg-copy = black
 $color-link-lang = #CAEEFF
 
 $color-footer-text = white
 $color-footer-heading = #EEE
 $color-footer-link = #AAA
 $color-footer-link-hover = #CCC
+$color-footer-column-line = #51575f
 
 $color-copy-text = white
 $color-copy-link = white
@@ -32,6 +35,14 @@ $font = 'PT Serif', Georgia, serif
 body *
     font-family: $font
 
+body a
+    color $color-link-base
+    &:visited
+        color $color-link-visited
+    &:active
+        color $color-link-active
+    &:hover
+        color $color-link-hover
 header 
     background-color $color-bg-header
 
@@ -55,6 +66,23 @@ header
     line-height $header-height
     float none
     padding 0 15px
+    white-space nowrap
+
+@media (max-width: 767px)
+    .navbar-brand
+        font-size 30px
+
+.navbar-default .navbar-toggle
+    margin-top 36px
+    border-color $color-text-header
+    & .icon-bar
+        background-color $color-text-header
+    &:focus,
+    &:hover
+        background-color $color-text-header
+        & .icon-bar
+            background-color $color-bg-header
+
 
 .navbar-default .navbar-brand
     color $color-text-header
@@ -74,15 +102,139 @@ header
     margin 30px 20px
     text-transform uppercase
 
-.navbar-nav.lang li a 
-    font-style italic
-    text-transform none
-    font-size 16px
-    color $color-link-lang
-    &:hover
-        text-decoration none
+.language
+    display inline-block
+    font-size 12px
+    line-height 14px
+    margin-right 15px
+    border 1px solid whitesmoke
+    border-radius 4px
+.language div
+    font-family 'PT Sans', sans-serif
+    padding 4px
+.language div.active
+    background whitesmoke
+    color $color-bg-header
+    font-weight bold
+
+.jumbotron
+    background-color $color-bg-header
+    color $color-text-header
+    padding-top 10px
+    & a
+    & a:visited
         color $color-text-header
-.navbar-nav.lang li a span
-    border-bottom 1px dashed 
+        text-decoration underline
+
+.recent
+    & h2
+        color $color-bg-header
+        margin-bottom 30px
+        font-weight bold
+        line-height 48px
+        & span
+            margin-right 20px
+    & time
+        color $color-text-unimportant
+    & h3
+        margin-top 5px
+        margin-bottom 20px
+        font-size 20px
+    & .desc
+        font-size 16px
+        margin-bottom 30px
     
+
+.twitter
+    font-size 16px
+    background-color $color-bg-twitter
+    color $color-text-twitter-text
+    & figure
+        margin 14px 0
+    & figcaption
+        & a
+            color $color-text-twitter-user
+    & blockquote
+        padding 0
+        padding-left 100px
+        margin 0
+        border 0
+        & a
+            color $color-text-twitter-text
+            text-decoration underline
+
+footer
+    background-color $color-bg-footer
+    color $color-footer-text
+    & a 
+    & a:visited
+        color $color-footer-link
+        &:hover
+            color $color-footer-link-hover
+    & h3
+        color $color-footer-heading
+        margin-bottom 10px
+        margin-top 30px
+        font-size 20px
+    & ul li 
+        font-size 16px
+        &:last-child
+            border 0
+        & a
+            line-height 36px
+            border-bottom 1px solid $color-footer-column-line    
+            &:hover
+                border-color $color-footer-link
+                text-decoration none
+            & sup
+                padding 0 3px
+    & ul.clients li
+        & a
+            color $color-link-lang
+
+.friends
+    text-align center
+.friends a
+    text-decoration none
+    margin 20px 15px
+    display inline-block
+.friends a img
+    max-height 50px
     
+
+.copyright
+    line-height 30px
+    overflow hidden
+    font-size 12px
+    background-color $color-bg-copy
+    color $color-copy-text
+    & a
+        color $color-copy-link
+        &:visited
+            color darken($color-copy-link, 20)
+        &:hover
+            color $color-copy-link-hover
+        
+    & ul
+        margin-bottom 0
+.copyright * 
+    font-family 'PT Sans', sans-serif
+
+
+.section-header
+    & .btn
+        font-family 'PT Sans', sans-serif
+        font-size 14px
+        margin-top -2px
+        margin-right 10px
+
+.btn-info
+    background-color transparent
+    color $color-bg-header
+    border-color $color-bg-header
+    &:hover
+        background-color $color-bg-header
+        color $color-text-header
+
+
+
