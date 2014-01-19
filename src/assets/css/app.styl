@@ -1,12 +1,13 @@
 @import url('http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
 
 // variables
-$font-size = 14px
 $color-link-base = #358BFF
 $color-link-active = #236DD1
 $color-link-hover = #236DD1
 //$color-link-visited = #7635FF
 $color-link-visited = #559bbf
+$color-text-article = #444
 $color-text-base = gray
 $color-text-header = white
 $color-text-unimportant = silver
@@ -30,10 +31,14 @@ $color-copy-link-hover = #AAA
 
 $header-height = 100px;
 
-$font = 'PT Serif', Georgia, serif
+$font-size = 16px
+$font-serif = 'PT Serif', Georgia, serif
+$font-sans = 'PT Sans', sans-serif
 
-body *
-    font-family: $font
+body
+    font-size $font-size
+    & *
+        font-family: $font-serif
 
 body a
     color $color-link-base
@@ -43,8 +48,21 @@ body a
         color $color-link-active
     &:hover
         color $color-link-hover
+
+h1, h2, h3 
+    color $color-bg-header
+
 header 
     background-color $color-bg-header
+
+.content
+    margin-bottom 30px
+    & article
+        font-size 19px
+        color $color-text-article
+        & h1
+            margin 30px 0 40px
+            font-size 32px
 
 .navbar
     border none
@@ -90,7 +108,7 @@ header
     &:hover
         color $color-text-header
 .navbar-default .navbar-nav *
-    font-family 'PT Sans', sans-serif
+    font-family $font-sans
     font-size 18px
 .navbar-default .navbar-nav li a 
     color $color-text-header
@@ -110,7 +128,7 @@ header
     border 1px solid whitesmoke
     border-radius 4px
 .language div
-    font-family 'PT Sans', sans-serif
+    font-family $font-sans
     padding 4px
 .language div.active
     background whitesmoke
@@ -218,12 +236,12 @@ footer
     & ul
         margin-bottom 0
 .copyright * 
-    font-family 'PT Sans', sans-serif
+    font-family $font-sans
 
 
 .section-header
     & .btn
-        font-family 'PT Sans', sans-serif
+        font-family $font-sans
         font-size 14px
         margin-top -2px
         margin-right 10px
@@ -235,6 +253,79 @@ footer
     &:hover
         background-color $color-bg-header
         color $color-text-header
+
+
+.contacts
+    border-bottom 1px dashed $color-text-unimportant
+    padding-bottom 20px
+    & a.btn
+        font-size 24px
+    & > div
+        text-align center
+        margin 10px 0
+    & > .col-sm-6
+        text-align left
+.profiles
+    border-bottom 1px dotted $color-text-unimportant
+    & div:last-child
+        padding-bottom 20px
+    & ul:first-child li        
+        margin-left 10px
+    & ul li 
+        position relative
+        line-height 1.88
+    & ul li .icon
+        position absolute
+        left -23px
+        top 0
+        color $color-text-base
+        line-height 30px
+    & strong
+        font-size 20px
+    & address
+        margin-bottom 10px
+    & small
+        display block
+        font-size 12px
+        margin-bottom 10px
+.cv
+    & h3
+        font-size 20px
+    & ul
+        list-style circle
+        font-size 14px
+        margin-left -40px
+        & li
+            margin 10px 0
+            & h4
+                font-size 14px
+                margin-bottom 0
+                & small
+                    display block
+                    font-size 10px
+            & a
+                font-size 12px
+        & li.current
+            border-bottom 1px dashed $color-text-unimportant
+            padding-bottom 10px
+            & h4
+                font-size 18px
+                & small
+                    font-size 13px
+            & a
+                font-size 14px
+
+    & ul li strong:first-child
+        font-size 16px
+    & dl
+        font-size 14px
+        & dd
+            font-size 12px
+            margin-bottom 15px     
+
+@media (max-width: 767px)
+    .cv ul
+        list-style none
 
 
 
