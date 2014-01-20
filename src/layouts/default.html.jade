@@ -13,9 +13,9 @@
 
 doctype html
 html(lang= site.lang)
-    include partials/head
+    include partials/common/head
     body
-        include partials/navbar
+        include partials/common/navbar
         != content
-        include partials/footer
+        include partials/common/footer
     != scripts.toHTML()

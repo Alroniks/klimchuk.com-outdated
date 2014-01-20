@@ -24,11 +24,6 @@ docpadConfig = {
         pages: (database) ->
             database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
-    # =================================
-    # Environments
-    # Language specific configuration
-    # $ docpad run --env en
-    # $ docpad generate --env en
     environments:
         en:
             documentsPaths: ['data/en']
@@ -44,10 +39,8 @@ docpadConfig = {
         jade:
             jadeOptions:
                 pretty: true
-                #basedir: process.cwd() + '/src/layouts'
         partials:
             partialsPath: process.cwd() + '/src/layouts/partials'
-
 
     events:
         generateBefore: (opts) ->
@@ -69,5 +62,4 @@ docpadConfig = {
                     next()
 }
 
-# Export our DocPad Configuration
 module.exports = docpadConfig
