@@ -88,4 +88,8 @@ module.exports = function(grunt){
     'stylus',
     'watch', 
   ]);
+  grunt.registerTask('prepare', [
+    'copy',
+    'stylus'
+  ]);
 };
