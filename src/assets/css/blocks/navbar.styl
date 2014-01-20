@@ -1,0 +1,55 @@
+.navbar
+    border none
+    color: $color-text-header
+    margin-bottom 0
+    min-height $header-height
+.navbar-default
+    background-color transparent
+    border-radius 0
+    box-shadow none
+    color $color-text-header
+.navbar-header h1
+    overflow hidden
+    line-height $header-height
+    height $header-height
+    margin 0
+.navbar-brand
+    font-size 48px
+    line-height $header-height
+    float none
+    padding 0 15px
+    white-space nowrap
+
+@media (max-width: 767px)
+    .navbar-brand
+        font-size 30px
+
+.navbar-default .navbar-toggle
+    margin-top 36px
+    border-color $color-text-header
+    & .icon-bar
+        background-color $color-text-header
+    &:focus,
+    &:hover
+        background-color $color-text-header
+        & .icon-bar
+            background-color $color-bg-header
+
+
+.navbar-default .navbar-brand
+    color $color-text-header
+    &:focus
+    &:hover
+        color $color-text-header
+.navbar-default .navbar-nav *
+    font-family $font-sans
+    font-size 18px
+.navbar-default .navbar-nav li a 
+    color $color-text-header
+    &:hover
+        color $color-text-header
+        text-decoration underline
+
+.navbar-nav
+    margin 30px 20px
+    text-transform uppercase
