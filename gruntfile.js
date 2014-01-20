@@ -4,7 +4,7 @@ module.exports = function(grunt){
       compile: {
         files: [{
           cwd: 'src/assets/css',
-          src: '**/*.styl',
+          src: 'index.styl',
           dest: 'src/files/css',
           expand: true,
           ext: '.css',
@@ -24,21 +24,7 @@ module.exports = function(grunt){
         files: ['src/assets/css/**/*.styl'],
         tasks: ['stylus'],
       },
-      //imagemin: {
-      //  files: ['source/img/**/*.{png,jpg,gif}'],
-      //  tasks: ['imagemin'],
-      //}
     },
-    // imagemin: {
-    //   dynamic: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'source/img/',
-    //       src: ['**/*.{png,jpg,gif}'],
-    //       dest: 'dest/img/',
-    //     }]
-    //   }
-    // },
     copy: {
       css: {
         files: [{
@@ -76,12 +62,14 @@ module.exports = function(grunt){
           expand: true
         }]
       }
-    }
+    },
+    clean: ["src/files/css", "src/files/js"]
   });
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', [
     'copy', 
@@ -89,6 +77,7 @@ module.exports = function(grunt){
     'watch', 
   ]);
   grunt.registerTask('prepare', [
+    'clean',
     'copy',
     'stylus'
   ]);
