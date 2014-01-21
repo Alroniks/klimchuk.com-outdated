@@ -8,10 +8,7 @@ richtypo = require 'richtypo'
 docpadConfig = {
     templateData:
         cutTag: '<!-- cut -->'
-
-        # will be read from lang file
         site: {}
-
         pageTitle: -> 
             if @document.title
                 "#{@document.title} — #{@site.title}"
@@ -20,9 +17,15 @@ docpadConfig = {
 
     collections:
         posts: (database) ->
-            database.findAllLive({relativeOutDirPath: 'all', unpublished: $exists: false}, [date:-1])
+            database.findAllLive(
+                {relativeOutDirPath: 'blog', unpublished: $exists: false}, 
+                [date:-1]
+            )
         pages: (database) ->
-            database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+            database.findAllLive(
+                {pageOrder: $exists: true}, 
+                [pageOrder:1]
+            )
 
     environments:
         en:

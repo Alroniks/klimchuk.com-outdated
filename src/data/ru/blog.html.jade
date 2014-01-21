@@ -1,7 +1,16 @@
 ---
-title: Блог
-layout: default
+title: 'Бортовой журнал / Блог'
+menutitle: 'Блог'
+layout: 'blogpage'
 pageOrder: 2
 ---
 
-.jumbotron 123
+title= ''
+
+each post in getCollection('posts').toJSON()
+    article.post
+        h2: a(href=post.url)= post.title
+        .intro | desct before cut
+        .info
+            a(href="#") MODX
+            time= post.date

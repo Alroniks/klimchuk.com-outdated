@@ -1,0 +1,74 @@
+.contacts
+    border-bottom 1px dashed $color-text-unimportant
+    padding-bottom 20px
+    & a.btn
+        font-size 24px
+    & > div
+        text-align center
+        margin 10px 0
+    & > .col-sm-6
+        text-align left
+.profiles
+    border-bottom 1px dotted $color-text-unimportant
+    & div:last-child
+        padding-bottom 20px
+    & ul:first-child li        
+        margin-left 10px
+    & ul li 
+        position relative
+        line-height 1.88
+    & ul li .icon
+        position absolute
+        left -23px
+        top 0
+        color $color-text-base
+        line-height 30px
+    & strong
+        font-size 20px
+    & address
+        margin-bottom 10px
+    & small
+        display block
+        font-size 12px
+        margin-bottom 10px
+.cv
+    & h3
+        font-size 20px
+    & ul
+        list-style circle
+        font-size 14px
+        margin-left -40px
+        & li
+            margin 10px 0
+            & h4
+                font-size 14px
+                margin-bottom 0
+                & small
+                    display block
+                    font-size 10px
+            & a
+                font-size 12px
+        & li.current
+            border-bottom 1px dashed $color-text-unimportant
+            padding-bottom 10px
+            & h4
+                font-size 18px
+                & small
+                    font-size 13px
+            & a
+                font-size 14px
+
+    & ul li strong:first-child
+        font-size 16px
+    & dl
+        font-size 14px
+        & dd
+            font-size 12px
+            margin-bottom 15px     
+
+@media (max-width: 767px)
+    .cv ul
+        list-style none
+
+
+

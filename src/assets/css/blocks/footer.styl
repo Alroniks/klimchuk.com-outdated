@@ -1,0 +1,37 @@
+footer
+    background-color $color-bg-footer
+    color $color-footer-text
+    & a 
+    & a:visited
+        color $color-footer-link
+        &:hover
+            color $color-footer-link-hover
+    & h3
+        color $color-footer-heading
+        margin-bottom 10px
+        margin-top 30px
+        font-size 20px
+    & ul li 
+        font-size 16px
+        &:last-child
+            border 0
+        & a
+            line-height 36px
+            border-bottom 1px solid $color-footer-column-line    
+            &:hover
+                border-color $color-footer-link
+                text-decoration none
+            & sup
+                padding 0 3px
+    & ul.clients li
+        & a
+            color $color-link-lang
+
+.friends
+    text-align center
+.friends a
+    text-decoration none
+    margin 20px 15px
+    display inline-block
+.friends a img
+    max-height 50px

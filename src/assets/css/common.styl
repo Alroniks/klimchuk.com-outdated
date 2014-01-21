@@ -14,3 +14,27 @@ body a
 
 h1, h2, h3 
     color $color-bg-header
+
+.btn-info
+    background-color transparent
+    color $color-bg-header
+    border-color $color-bg-header
+    &:hover
+        background-color $color-bg-header
+        color $color-text-header
+
+.section-header
+    & .btn
+        font-family $font-sans
+        font-size 14px
+        margin-top -2px
+        margin-right 10px
+
+.content
+    margin-bottom 30px
+    & article
+        font-size 19px
+        color $color-text-article
+        & h1
+            margin 30px 0 40px
+            font-size 32px
