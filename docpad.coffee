@@ -1,5 +1,3 @@
-# docpad.org
-
 fs = require 'fs'
 YAML = require 'yamljs'
 moment = require 'moment'
@@ -14,6 +12,16 @@ docpadConfig = {
                 "#{@document.title} — #{@site.title}"
             else
                 @site.title
+        pageDescription: ->
+            if @document.description
+                "#{@document.description}"
+            else
+                @site.description
+        pageKeywords: ->
+            if @document.keywords
+                "#{@document.keywords}"
+            else
+                @site.keywords
 
     collections:
         posts: (database) ->
