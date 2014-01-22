@@ -4,6 +4,9 @@ moment = require 'moment'
 richtypo = require 'richtypo'
 
 docpadConfig = {
+
+    databaseCache: false,
+
     templateData:
         cutTag: '<!-- cut -->'
         site: {}
@@ -26,8 +29,13 @@ docpadConfig = {
     collections:
         posts: (database) ->
             database.findAllLive(
-                {relativeOutDirPath: 'blog', unpublished: $exists: false}, 
+                {relativeOutDirPath: 'blog'}, 
                 [date:-1]
+            )
+        clients: (database) ->
+            database.findAllLive(
+                {relativeOutDirPath: '4clients', pageOrder: $exists true},
+                [pageOrder:1]
             )
         pages: (database) ->
             database.findAllLive(

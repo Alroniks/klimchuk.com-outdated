@@ -17,5 +17,4 @@ header
                 .collapse.navbar-collapse.navbar-ex1-collapse
                     ul.nav.navbar-nav.navbar-right
                         each page in getCollection("pages").toJSON()
-                            // - console.log(page)
                             li: a(href=page.url)= page.menutitle

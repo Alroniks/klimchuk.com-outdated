@@ -11,6 +11,10 @@ html(lang= site.lang)
     include partials/common/head
     body
         include partials/common/navbar
-        != content
+        .content
+            .container
+                .row
+                    .col-xs-12
+                        != content
         include partials/common/footer
     != scripts.toHTML()

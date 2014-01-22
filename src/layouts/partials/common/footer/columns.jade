@@ -2,10 +2,8 @@
     .col-xs-12.col-sm-4.col-md-2
         h3 For Clients
         ul.list-unstyled.clients
-            li: a(href="/") Services
-            li: a(href="http://klimchuk.com/prices") Prices
-            li: a(href="http://klimchuk.com/contacts") Contacts
-            li: a(href="http://klimchuk.com/projects/sites") Portfolio
+            each page in getCollection("clients").toJSON()
+                li: a(href=page.url)= page.menutitle
     .col-xs-12.col-sm-4.col-md-3
         h3 Recent Projects
         ul.list-unstyled

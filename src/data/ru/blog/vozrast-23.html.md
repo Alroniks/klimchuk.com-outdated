@@ -1,7 +1,7 @@
 ---
 title: 'Возраст: 23'
 date: Dec 17, 2011
-layout: blogpage
+layout: 'default'
 ---
 
 # Возраст: 23

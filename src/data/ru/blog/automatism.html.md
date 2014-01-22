@@ -1,7 +1,7 @@
 ---
 title: Автоматизм
 date: Sep 15, 2013
-layout: blogpage
+layout: 'default'
 ---
 
 # Автоматизм
