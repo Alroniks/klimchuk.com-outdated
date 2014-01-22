@@ -2,6 +2,7 @@ fs = require 'fs'
 YAML = require 'yamljs'
 moment = require 'moment'
 richtypo = require 'richtypo'
+marked = require 'marked'
 
 docpadConfig = {
 
@@ -25,6 +26,20 @@ docpadConfig = {
                 "#{@document.keywords}"
             else
                 @site.keywords
+        cuttedContent: (content) ->            
+            if @hasReadMore content
+                cutIdx = content.search @cutTag
+                content[0..cutIdx-1]
+            else
+                content
+        hasReadMore: (content) ->
+            content and ((content.search @cutTag) isnt -1)
+        pubDate: (date) ->
+            moment(date).format('LL')  # December 23 2013
+        rt: (s) ->
+            s and (richtypo.rich s)
+        render: (s) ->
+            marked s
 
     collections:
         posts: (database) ->
@@ -34,12 +49,12 @@ docpadConfig = {
             )
         clients: (database) ->
             database.findAllLive(
-                {relativeOutDirPath: '4clients', pageOrder: $exists true},
+                {relativeOutDirPath: '4clients'},
                 [pageOrder:1]
             )
         pages: (database) ->
             database.findAllLive(
-                {pageOrder: $exists: true}, 
+                {}, 
                 [pageOrder:1]
             )
 

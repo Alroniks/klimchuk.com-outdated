@@ -1,7 +1,8 @@
 ---
 title: Prices M
-menutitle: Prices
-layout: default
+anchor: Prices
+layout: 'innerpage'
+pageOrder: 2
 ---
 
 # Prices

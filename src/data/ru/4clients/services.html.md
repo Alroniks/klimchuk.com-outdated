@@ -1,7 +1,8 @@
 ---
 title: Services M
-menutitle: Services
-layout: default
+anchor: Services
+layout: 'innerpage'
+pageOrder: 1
 ---
 
 # Services

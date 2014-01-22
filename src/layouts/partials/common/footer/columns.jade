@@ -3,14 +3,10 @@
         h3 For Clients
         ul.list-unstyled.clients
             each page in getCollection("clients").toJSON()
-                li: a(href=page.url)= page.menutitle
+                li: a(href=page.url)= page.anchor
     .col-xs-12.col-sm-4.col-md-3
         h3 Recent Projects
         ul.list-unstyled
-            li: a(href="") Проект MODX.by
-            li: a(href="") Интернет-магазин EMALL.BY
-            li: a(href="") ANTINI Interior
-            li: a(href="") Dvesta - крановые панели
     .col-xs-12.col-sm-4.col-md-2
         h3 Blog Headings
         ul.list-unstyled

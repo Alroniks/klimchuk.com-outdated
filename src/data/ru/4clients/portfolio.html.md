@@ -1,7 +1,8 @@
 ---
 title: Portfolio M
-menutitle: Portfolio
-layout: default
+anchor: Portfolio
+layout: 'innerpage'
+pageOrder: 0
 ---
 
 # Portfolio
