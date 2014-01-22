@@ -2,7 +2,6 @@ fs = require 'fs'
 YAML = require 'yamljs'
 moment = require 'moment'
 richtypo = require 'richtypo'
-marked = require 'marked'
 
 docpadConfig = {
 
@@ -38,8 +37,8 @@ docpadConfig = {
             moment(date).format('LL')  # December 23 2013
         rt: (s) ->
             s and (richtypo.rich s)
-        render: (s) ->
-            marked s
+        rtt: (s) ->
+            s and (richtypo.title s)
 
     collections:
         posts: (database) ->

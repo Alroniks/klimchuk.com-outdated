@@ -4,18 +4,38 @@ anchor: 'Блог'
 inMenu: true
 layout: 'innerpage'
 pageOrder: 2
+isPaged: true
+pagedCollection: 'posts'
+pageSize: 5
 ---
 
-h2 Blog
+h2 Logbook
 
-each post in getCollection('posts').toJSON()
+each post in getPageCollection('posts').toJSON()
     article.post
-        h2: a(href=post.url)= post.title
+        h2: a(href=post.url)!= rtt(post.anchor)
             ul.list-unstyled.list-inline.tags
                 li: a(href="#") MODX
                 li: a(href="#") Личная жизнь
-        .intro= cuttedContent(post.contentRenderedWithoutLayouts)
+
+        .intro!= rt(cuttedContent(post.contentRenderedWithoutLayouts))
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...
         .info
-            time= pubDate(post.date)
+            time(pubdate, datetime=post.date)= pubDate(post.date)
+
+- if (document.page.count > 1)
+    ul.pagination
+        unless hasPrevPage()
+            li &laquo;
+        else
+            li: a(href=getPrevPage()) &laquo;
+        - for (var i = 0; i<document.page.count; i++)
+            - if (document.page.number == i)
+                li.active: span!= i + 1
+            - else
+                li: a(href=getPageUrl(i))!= i + 1
+        unless hasNextPage()
+            li &raquo;
+        else
+            li: a(href=getNextPage()) &raquo;

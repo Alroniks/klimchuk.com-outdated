@@ -1,10 +1,10 @@
 ---
-title: 'Developing an Extras in MODx: configuring of the environment'
+title: 'Environment of MODX developer'
+anchor: 'Environment of MODX developer'
 date: 1 Jan, 2014
 layout: 'default'
+isPaged: true
 ---
-
-# Developing an Extras in MODx: configuring of the environment
 
 Hi, colleagues!
 
