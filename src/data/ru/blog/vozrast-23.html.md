@@ -4,6 +4,9 @@ anchor: 'Возраст: 23'
 date: Dec 17, 2011
 layout: 'default'
 isPaged: true
+tags:
+    - tag1
+    - tag2
 ---
 
 23 года это много или мало?

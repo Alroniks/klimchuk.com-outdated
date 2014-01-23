@@ -11,16 +11,22 @@ pageSize: 5
 
 h2 Logbook
 
+each rel in getCloudTags()
+    a(href="#")!= rel.title
+
 each post in getPageCollection('posts').toJSON()
     article.post
         h2: a(href=post.url)!= rtt(post.anchor)
             ul.list-unstyled.list-inline.tags
-                li: a(href="#") MODX
-                li: a(href="#") Личная жизнь
-
+                if (post.tags)
+                    each tag in post.tags
+                        li: a(href!="/tags/" + tag)!= rtt(tag) 
         .intro!= rt(cuttedContent(post.contentRenderedWithoutLayouts))
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...
+
+        each rel in getRelatedDocuments(post)
+            a(href=rel.slug)!= rel.title
         .info
             time(pubdate, datetime=post.date)= pubDate(post.date)
 
