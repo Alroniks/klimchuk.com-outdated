@@ -6,6 +6,7 @@ richtypo = require 'richtypo'
 docpadConfig = {
 
     databaseCache: true,
+    maxAge: false,
 
     templateData:
         cutTag: '<!-- cut -->'

@@ -2,6 +2,8 @@
 * [Russian version](http://klimchuk.by)
 * [English version](http://klimchuk.com)
 
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 Powered by [DocPad](http://docpad.org/), using [Stylus](http://learnboost.github.io/stylus/), [Jade](http://jade-lang.com/), [Grunt](http://gruntjs.com/)
 
 ## Build step by step
