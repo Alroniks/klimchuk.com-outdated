@@ -28,7 +28,7 @@ each post in getPageCollection('posts').toJSON()
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...
         .info
-            //- time(pubdate, datetime=post.date)= pubDate(post.date)
+            time(pubdate, datetime=post.date)= pubDate(post.date)
 
 - if (document.page.count > 1)
     ul.pagination
