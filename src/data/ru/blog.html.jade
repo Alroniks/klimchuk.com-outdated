@@ -28,20 +28,20 @@ each post in getPageCollection('posts').toJSON()
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...
         .info
-            time(pubdate, datetime=post.date)= pubDate(post.date)
+            //- time(pubdate, datetime=post.date)= pubDate(post.date)
 
 - if (document.page.count > 1)
     ul.pagination
         unless hasPrevPage()
-            li &laquo;
+            li.disabled: a(href="") Вперед
         else
-            li: a(href=getPrevPage()) &laquo;
+            li: a(href=getPrevPage()) Вперед
         - for (var i = 0; i<document.page.count; i++)
             - if (document.page.number == i)
                 li.active: span!= i + 1
             - else
                 li: a(href=getPageUrl(i))!= i + 1
         unless hasNextPage()
-            li &raquo;
+            li.disabled: a(href="") Назад
         else
-            li: a(href=getNextPage()) &raquo;
+            li: a(href=getNextPage()) Назад
