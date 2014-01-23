@@ -5,8 +5,8 @@ date: Dec 17, 2011
 layout: 'default'
 isPaged: true
 tags:
-    - tag1
-    - tag2
+    - Closet
+    - Personal life
 ---
 
 23 года это много или мало?

@@ -5,7 +5,7 @@ richtypo = require 'richtypo'
 
 docpadConfig = {
 
-    databaseCache: false,
+    databaseCache: true,
 
     templateData:
         cutTag: '<!-- cut -->'
@@ -39,6 +39,9 @@ docpadConfig = {
             s and (richtypo.rich s)
         rtt: (s) ->
             s and (richtypo.title s)
+        getTagUrl: (tag) ->
+            doc = docpad.getFile({tag:tag})
+            return doc?.get('url') or ''
 
     collections:
         posts: (database) ->
@@ -74,6 +77,14 @@ docpadConfig = {
                 pretty: true
         partials:
             partialsPath: process.cwd() + '/src/layouts/partials'
+        tags:
+            extension: '.html.jade'
+            injectDocumentHelper: (document) ->
+                document.setMeta(
+                    layout: 'default'
+                    dynamic: true
+                    data: """!=partial('tag')"""
+                )
 
     events:
         generateBefore: (opts) ->

@@ -4,6 +4,8 @@ anchor: 'Environment of MODX developer'
 date: 1 Jan, 2014
 layout: 'default'
 isPaged: true
+tags:
+    - MODX
 ---
 
 Hi, colleagues!
