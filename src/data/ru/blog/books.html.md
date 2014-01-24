@@ -2,9 +2,8 @@
 title: 'Книги'
 anchor: 'Книги'
 keywords: книги, bookmate, чтение, электронные книги, бумага, развитие, личность
-date: Aug 13, 2013
-layout: 'default'
-isPaged: true
+date: Dec 24, 2011
+layout: 'blogpost'
 tags:
     - Closet
 ---

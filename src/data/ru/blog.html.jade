@@ -1,21 +1,11 @@
 ---
 title: 'Бортовой журнал / Блог'
 anchor: 'Блог'
-inMenu: true
-layout: 'innerpage'
-pageOrder: 2
+layout: 'blogpage'
 isPaged: true
 pagedCollection: 'posts'
 pageSize: 5
 ---
-
-h2 Logbook
-
-ul.list-unstyled.list-inline.tagscloud
-    for tag in getTagCloud()
-        li
-            a(href=tag.url)!= rtt(tag.tag)
-            sup= tag.count
 
 each post in getPageCollection('posts').toJSON()
     article.post
@@ -28,7 +18,7 @@ each post in getPageCollection('posts').toJSON()
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...
         .info
-            //- time(pubdate, datetime=post.date)= pubDate(post.date)
+            time(pubdate, datetime=post.date)= pubDate(post.date)
 
 - if (document.page.count > 1)
     ul.pagination

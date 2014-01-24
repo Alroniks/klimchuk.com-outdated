@@ -16,5 +16,6 @@ header
                             | Ivan Klimchuk
                 .collapse.navbar-collapse.navbar-ex1-collapse
                     ul.nav.navbar-nav.navbar-right
-                        each page in getCollection("pages").findAll({inMenu: true}).toJSON()
+                        each page in getCollection("pages").findAll({dynamic: false}).toJSON()
+                            //- - console.log(page)
                             li: a(href=page.url)= page.anchor

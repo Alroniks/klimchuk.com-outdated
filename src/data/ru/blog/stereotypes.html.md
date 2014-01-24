@@ -2,9 +2,8 @@
 title: 'Стереотипы'
 anchor: 'Стереотипы'
 keywords: стереотипы, комплексы, характер, психология, мнение, развитие личности, человек
-date: Aug 12, 2013
-layout: 'default'
-isPaged: true
+date: Dec 10, 2011
+layout: 'blogpost'
 tags:
     - Closet
 ---

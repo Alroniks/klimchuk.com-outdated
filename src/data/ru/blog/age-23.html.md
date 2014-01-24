@@ -2,12 +2,10 @@
 title: 'Возраст: 23'
 anchor: 'Возраст: 23'
 keywords: 23, день рождения, декабрь, семнадцать, 17, праздник, итоги
-date: Dec 17, 2011
-layout: 'default'
-isPaged: true
+date: Dec 16, 2011
+layout: 'blogpost'
 tags:
     - Closet
-    - Personal life
 ---
 
 23 года это много или мало?

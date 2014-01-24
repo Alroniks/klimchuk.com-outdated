@@ -6,6 +6,8 @@ richtypo = require 'richtypo'
 docpadConfig = {
 
     databaseCache: true,
+    maxAge: false,
+    port: 78880,
 
     templateData:
         cutTag: '<!-- cut -->'
@@ -56,7 +58,7 @@ docpadConfig = {
             )
         pages: (database) ->
             database.findAllLive(
-                {}, 
+                {inMenu: $exists: true}, 
                 [pageOrder:1]
             )
 

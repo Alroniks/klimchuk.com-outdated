@@ -1,8 +1,9 @@
 ---
 title: 'Автоматизм'
 anchor: 'Автоматизм'
+keywords: 
 date: Sep 15, 2013
-layout: 'default'
+layout: 'blogpost'
 tags:
     - Closet
     - Personal life

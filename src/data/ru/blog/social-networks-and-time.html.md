@@ -2,8 +2,8 @@
 title: 'Социальные сети и время'
 anchor: 'Социальные сети и время'
 keywords: twitter, iklimchuk, facebook, вконтакте, социальные сети, анонимность, время, жизнь
-date: Oct 23, 2013
-layout: 'default'
+date: Dec 09, 2011
+layout: 'blogpost'
 tags:
     - Closet
 ---

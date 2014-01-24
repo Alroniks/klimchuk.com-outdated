@@ -1,0 +1,17 @@
+---
+layout: 'innerpage'
+---
+
+if document.layout == 'blogpost'
+    h2: a(href="blog.html") Logbook
+else
+    h2 Logbook
+
+aside
+    ul.list-unstyled.list-inline.tagscloud
+        for tag in getTagCloud()
+            li
+                a(href=tag.url)!= rtt(tag.tag)
+                sup= tag.count
+
+!= content
