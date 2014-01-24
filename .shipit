@@ -1,0 +1,16 @@
+host='klimchukby'
+path='/home/alroniks/repos/site-klimchukcom'
+
+[clear]
+node_modules/docpad/bin/docpad clean
+rm -rf /var/www/by/klimchuk/www
+
+[update]
+git checkout master
+git pull
+npm update
+
+[build]
+node_modules/bower/bin/bower install
+node_modules/grunt-cli/bin/grunt prepare
+node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www
