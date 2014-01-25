@@ -9,3 +9,11 @@ copyrightUrl: http://klimchuk.by
 twitterExtra: data-via="iklimchuk"
 transLang: en
 transUrl: http://klimchuk.com
+
+post|posts: пост|поста|постов
+'{num} {posts} tagged <em>{tag}</em>': '{num} {posts} с тегом <em>{tag}</em>'
+
+tagNames:
+    modx: MODX
+    closet: Чулан
+    presonal-life: Личная жизнь

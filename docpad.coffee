@@ -3,6 +3,11 @@ YAML = require 'yamljs'
 moment = require 'moment'
 richtypo = require 'richtypo'
 
+pluralTypes =
+    en: (n) -> (if n isnt 1 then 1 else 0)
+    ru: (n) -> (if n % 10 is 1 and n % 100 isnt 11 then 0 else (if n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20) then 1 else 2))
+
+
 docpadConfig = {
 
     databaseCache: true,
@@ -44,6 +49,15 @@ docpadConfig = {
         getTagUrl: (tag) ->
             doc = docpad.getFile({tag:tag})
             return doc?.get('url') or ''
+        getPostsForTag: (tag) ->
+            return @getCollection('posts').findAll(tags: $has: tag)
+        _: (s, params=null) ->
+            params ?= []
+            s = @site[s] or s
+            s.replace /\{([^\}]+)\}/g, (m, key) ->
+                params[key] or m
+        plural: (n, s) ->
+            ((@_ s).split '|')[pluralTypes[@site.lang](n)]
 
     collections:
         posts: (database) ->
@@ -81,12 +95,16 @@ docpadConfig = {
             partialsPath: process.cwd() + '/src/layouts/partials'
         tags:
             extension: '.html.jade'
+            relativeDirPath: 'tags'
             injectDocumentHelper: (document) ->
                 document.setMeta(
-                    layout: 'default'
-                    dynamic: true
-                    data: """!=partial('tag')"""
+                    layout: 'innerpage'
+                    data: "!=partial('tag')"
                 )
+            title: (tag) ->
+                "Посты с тегом " + tag
+        related:
+            parentCollectionName: "posts"
 
     events:
         generateBefore: (opts) ->
