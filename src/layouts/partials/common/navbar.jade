@@ -9,13 +9,19 @@ header
                         span.icon-bar
                         span.icon-bar
                     h1
-                        a(href="/" ).navbar-brand 
-                            .language
-                                div RU
-                                div.active EN
-                            | Ivan Klimchuk
+                        .language
+                            case site.lang
+                                when 'ru'
+                                    a(href=site.transUrl)
+                                        span!= site.lang
+                                        span.active!= site.transLang
+                                when 'en'
+                                    a(href=site.transUrl)
+                                        span.active!= site.lang
+                                        span!= site.transLang
+                        a.navbar-brand(href="/")!= rtt(site.title)
+                        
                 .collapse.navbar-collapse.navbar-ex1-collapse
                     ul.nav.navbar-nav.navbar-right
-                        each page in getCollection("pages").findAll({dynamic: false}).toJSON()
-                            //- - console.log(page)
+                        each page in getCollection("pages").findAll().toJSON()
                             li: a(href=page.url)= page.anchor

@@ -35,6 +35,8 @@
     "yamljs": "~0.1.4",
     "moment": "~2.5.0",
     "richtypo": "~0.1.8",
-    "bower": "~1.2.8"
+    "bower": "~1.2.8",
+    "docpad-plugin-rss": "~2.0.1",
+    "docpad-plugin-feedr": "~2.7.0",
   }
 }

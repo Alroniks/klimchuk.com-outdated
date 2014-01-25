@@ -3,18 +3,12 @@
         .row
             .col-xs-12
                 h2.section-header 
-                    span Blog Updates
-                    a.btn.btn-sm.btn-info(href="/blog.html") Read the Blog
-                    a.btn.btn-sm.btn-default(href="#") The simple Link to ither Page
-                .col-xs-12.col-md-4
-                    time 20 august 2013, 15:21
-                    h3: a(href="#") Developing an Extras in MODx: configuring of the environment
-                    .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
-                .col-xs-12.col-md-4
-                    time 31 may 2010, 02:03
-                    h3: a(href="#") The first blog entry
-                    .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
-                .col-xs-12.col-md-4
-                    time 04 febrary 2013, 13:12
-                    h3: a(href="#") The second blog entry
-                    .desc: p Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
+                    span Обновления блога
+                    a.btn.btn-sm.btn-info(href="/blog.html") Читать блог
+                    //- a.btn.btn-sm.btn-success(href="#") Предложить тему
+
+                for post in getCollection('posts').toJSON().slice(0,3)
+                    .col-xs-12.col-md-4
+                        time(pubdate, datetime=post.date)= pubDate(post.date)
+                        h3: a(href=post.url)!= post.title
+                        .desc: p!= rt(cuttedContent(post.contentRenderedWithoutLayouts))

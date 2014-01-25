@@ -14,3 +14,10 @@ npm update
 node_modules/bower/bin/bower install
 node_modules/grunt-cli/bin/grunt prepare
 node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www
+
+[fastdeploy]
+git checkout master
+git pull
+npm update
+node_modules/grunt-cli/bin/grunt prepare
+node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www/

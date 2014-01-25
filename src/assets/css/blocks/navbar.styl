@@ -64,12 +64,17 @@ header
     margin-right 15px
     border 1px solid whitesmoke
     border-radius 4px
-.language div
-    font-family $font-sans
-    padding 4px
-.language div.active
-    background whitesmoke
-    color $color-bg-header
-    font-weight bold
+    text-transform uppercase
+    & a
+        text-decoration none
+    & span
+        display block
+        padding 4px
+        color $color-text-header
+        font-family $font-sans
+        &.active
+            background whitesmoke
+            color $color-bg-header
+            font-weight bold
 
     

@@ -3,11 +3,6 @@ YAML = require 'yamljs'
 moment = require 'moment'
 richtypo = require 'richtypo'
 
-pluralTypes =
-    en: (n) -> (if n isnt 1 then 1 else 0)
-    ru: (n) -> (if n % 10 is 1 and n % 100 isnt 11 then 0 else (if n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20) then 1 else 2))
-
-
 docpadConfig = {
 
     databaseCache: true,
@@ -16,7 +11,6 @@ docpadConfig = {
 
     templateData:
         cutTag: '<!-- cut -->'
-        site: {}
         pageTitle: -> 
             if @document.title
                 "#{@document.title} — #{@site.title}"
@@ -51,13 +45,8 @@ docpadConfig = {
             return doc?.get('url') or ''
         getPostsForTag: (tag) ->
             return @getCollection('posts').findAll(tags: $has: tag)
-        _: (s, params=null) ->
-            params ?= []
-            s = @site[s] or s
-            s.replace /\{([^\}]+)\}/g, (m, key) ->
-                params[key] or m
-        plural: (n, s) ->
-            ((@_ s).split '|')[pluralTypes[@site.lang](n)]
+        __: (s) ->
+            s[@site.lang] or '__ALERT__'
 
     collections:
         posts: (database) ->
@@ -80,10 +69,44 @@ docpadConfig = {
         en:
             documentsPaths: ['data/en']
             outPath: 'out/en'
+            localeCode: 'en'
+            templateData:
+                site:
+                    lang: 'en'
+                    url: 'http://klimchuk.com'
+                    title: 'Ivan Klimchuk'
+                    description: 'Меня зовут Иван. Уже больше 5 лет работаю PHP-программистом в разных компаниях'
+                    keywords: 'nothing'
+                    author: 'Ivan Klimchuk <ivan@klimchuk.com>'
+                    transLang: 'ru'
+                    transUrl: 'http://klimchuk.com'
+                    bezumkinru: 'Vasily Naumkin'
+                    grinchikru: 'Victor Grinchik'
+                    shevkocom: 'Valentin Shevko'
+                    thrashme: 'Ryan Thrash'
+                    markhamstracom: 'Mark Hamstra'
+                    copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. All right reserved.'
+
         ru:
             documentsPaths: ['data/ru']
             outPath: 'out/ru'
-
+            localeCode: 'ru'
+            templateData:
+                site:
+                    lang: 'ru'
+                    url: 'http://klimchuk.by'
+                    title: 'Иван Климчук'
+                    description: 'Меня зовут Иван. Уже больше 5 лет работаю PHP-программистом в разных компаниях'
+                    keywords: 'nothing'
+                    author: 'Иван Климчук <ivan@klimchuk.com>'
+                    transLang: 'en'
+                    transUrl: 'http://klimchuk.com'
+                    bezumkinru: 'Василий Наумкин'
+                    grinchikru: 'Виктор Гринчик'
+                    shevkocom: 'Валентин Шевко'
+                    thrashme: 'Райан Трэш'
+                    markhamstracom: 'Марк Хамстра'
+                    copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. Все права защищены.'
     plugins:
         highlightjs:
             aliases:
@@ -105,11 +128,9 @@ docpadConfig = {
                 "Посты с тегом " + tag
         related:
             parentCollectionName: "posts"
-
     events:
         generateBefore: (opts) ->
             lang = @docpad.config.env
-            @docpad.getConfig().templateData.site = (YAML.load "src/lang/#{lang}.yml")
             moment.lang(lang)
             richtypo.lang(lang)
         serverExtended: (opts) ->

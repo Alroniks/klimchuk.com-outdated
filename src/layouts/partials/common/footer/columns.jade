@@ -1,29 +1,31 @@
 .row
     .col-xs-12.col-sm-4.col-md-2
-        h3 For Clients
+        h3 
+        h3!= rtt(__({ru:'Для клиентов', en:'For Clients'}))
+        p!= __({ru:'Скоро все будет.', en:'Comming soon.'})
         ul.list-unstyled.clients
-            each page in getCollection("clients").toJSON()
-                li: a(href=page.url)= rtt(page.anchor)
+            //- each page in getCollection("clients").toJSON()
+                //- li: a(href=page.url)= rtt(page.anchor)
     .col-xs-12.col-sm-4.col-md-3
-        h3 Recent Projects
-        p Comming soon.
+        h3!= rtt(__({ru:'Текущие проекты', en:'Recent Projects'}))
+        p!= __({ru:'Скоро все будет.', en:'Comming soon.'})
         ul.list-unstyled
     .col-xs-12.col-sm-4.col-md-2
-        h3 Blog Headings
+        h3!= rtt(__({ru:'Рубрики блога', en:'Blog Headings'}))
         ul.list-unstyled
             for tag in getTagCloud()
                 li: a(href=tag.url)!= rtt(tag.tag)
                     sup= tag.count
     .col-xs-12.col-sm-4.col-sm-offset-2.col-md-2.col-md-offset-0
-        h3 I am read
+        h3!= rtt(__({ru:'Читаю', en:'I am read'}))
         ul.list-unstyled
-            li: a(href="http://bezumkin.ru", target="_blank") Vasily Naumkin
-            li: a(href="http://grinchik.ru", target="_blank") Victor Grinchik
-            li: a(href="http://thrash.me", target="_blank") Ryan Thrash
-            li: a(href="http://markhamstra.com", target="_blank") Mark Hamstra
-            li: a(href="http://shevko.com", target="_blank")!= _('shevkocom')
+            li: a(href="http://bezumkin.ru", target="_blank")!= rtt(site.bezumkinru)
+            li: a(href="http://grinchik.ru", target="_blank")!= rtt(site.grinchikru)
+            li: a(href="http://thrash.me", target="_blank")!= rtt(site.thrashme)
+            li: a(href="http://markhamstra.com", target="_blank")!= rtt(site.markhamstracom)
+            li: a(href="http://shevko.com", target="_blank")!= rtt(site.shevkocom)
     .col-xs-12.col-sm-6.col-md-3
-        h3 Fast Contacts
+        h3!= rtt(__({ru:'Быстрая связь', en:'Fast Contacts'}))
         ul.list-unstyled
             li
                 a(href="")
