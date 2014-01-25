@@ -3,9 +3,10 @@
         h3 For Clients
         ul.list-unstyled.clients
             each page in getCollection("clients").toJSON()
-                li: a(href=page.url)= page.anchor
+                li: a(href=page.url)= rtt(page.anchor)
     .col-xs-12.col-sm-4.col-md-3
         h3 Recent Projects
+        p Comming soon.
         ul.list-unstyled
     .col-xs-12.col-sm-4.col-md-2
         h3 Blog Headings
@@ -20,6 +21,7 @@
             li: a(href="http://grinchik.ru", target="_blank") Victor Grinchik
             li: a(href="http://thrash.me", target="_blank") Ryan Thrash
             li: a(href="http://markhamstra.com", target="_blank") Mark Hamstra
+            li: a(href="http://shevko.com", target="_blank")!= _('shevkocom')
     .col-xs-12.col-sm-6.col-md-3
         h3 Fast Contacts
         ul.list-unstyled
@@ -28,10 +30,10 @@
                     i.icon.icon-envelope 
                     | ivan@klimchuk.com
             li
-                a(href="") 
-                    i.icon.icon-skype 
-                    | Alroniks
-            li
                 a(href="")
                     i.icon.icon-phone 
                     | + 375 33 638 10 92
+            li
+                a(href="") 
+                    i.icon.icon-skype 
+                    | Alroniks

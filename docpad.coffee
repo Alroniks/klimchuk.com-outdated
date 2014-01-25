@@ -12,7 +12,7 @@ docpadConfig = {
 
     databaseCache: true,
     maxAge: false,
-    port: 78880,
+    port: 12000,
 
     templateData:
         cutTag: '<!-- cut -->'
