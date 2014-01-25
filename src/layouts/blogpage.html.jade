@@ -3,9 +3,9 @@ layout: 'innerpage'
 ---
 
 if document.layout == 'blogpost'
-    h2: a(href="blog.html") Logbook
+    h2: a(href="/blog.html")!= rtt(__({ru:'Бортовой журнал',en:'Logbook'}))
 else
-    h2 Logbook
+    h2!= rtt(__({ru:'Бортовой журнал',en:'Logbook'}))
 
 aside
     ul.list-unstyled.list-inline.tagscloud

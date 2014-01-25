@@ -1,23 +1,19 @@
 host='klimchukby'
 path='/home/alroniks/repos/site-klimchukcom'
 
-[clear]
-node_modules/docpad/bin/docpad clean
-rm -rf /var/www/by/klimchuk/www
-
-[update]
+[deploy]
 git checkout master
 git pull
 npm update
-
-[build]
-node_modules/bower/bin/bower install
+rm -rf /var/www/by/klimchuk/www
+node_modules/docpad/bin/docpad clean
 node_modules/grunt-cli/bin/grunt prepare
-node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www
+node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www/
 
 [fastdeploy]
 git checkout master
 git pull
-npm update
+rm -rf /var/www/by/klimchuk/www
+node_modules/docpad/bin/docpad clean
 node_modules/grunt-cli/bin/grunt prepare
 node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www/
