@@ -1,0 +1,19 @@
+---
+layout: 'default'
+---
+
+.content
+    .container
+        .row
+            .col-xs-12.contacts
+                != content
+                != partial('about/fast-contacts')
+        .row.profiles
+            .col-xs-12.col-sm-6.col-md-4!= partial('about/social-profiles')
+            .col-xs-12.col-sm-6.col-md-4!= partial('about/modx-profiles')
+            .col-xs-12.col-sm-12.col-md-4!= partial('about/ie')
+        .row.cv
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/studied')
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/jobs')
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/knowledges')
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/hobbies')
