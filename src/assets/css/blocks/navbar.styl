@@ -18,17 +18,13 @@ header
     margin 0
 .navbar-brand
     font-size 48px
-    line-height $header-height
     float none
     padding 0 15px
     white-space nowrap
 
-@media (max-width: 767px)
-    .navbar-brand
-        font-size 30px
-
 .navbar-default .navbar-toggle
-    margin-top 36px
+    margin 33px
+    margin-right 15px
     border-color $color-text-header
     & .icon-bar
         background-color $color-text-header
@@ -38,12 +34,15 @@ header
         & .icon-bar
             background-color $color-bg-header
 
-
 .navbar-default .navbar-brand
-    color $color-text-header
-    &:focus
-    &:hover
+    display inline-block
+    padding 40px 15px
+    vertical-align top
+    & a
         color $color-text-header
+        &:focus
+        &:hover
+            color $color-text-header
 .navbar-default .navbar-nav *
     font-family $font-sans
     font-size 18px
@@ -57,14 +56,21 @@ header
     margin 30px 20px
     text-transform uppercase
 
+@media (max-width: 767px)
+    .navbar-default .navbar-brand
+        font-size 22px
+        padding 40px 0
+
 .language
     display inline-block
     font-size 12px
     line-height 14px
-    margin-right 15px
+    margin 27px 0
+    margin-left 15px
     border 1px solid whitesmoke
     border-radius 4px
     text-transform uppercase
+    vertical-align top
     & a
         text-decoration none
     & span
