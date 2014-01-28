@@ -11,9 +11,9 @@ layout: 'default'
         .row.profiles
             .col-xs-12.col-sm-6.col-md-4!= partial('about/social-profiles')
             .col-xs-12.col-sm-6.col-md-4!= partial('about/modx-profiles')
-            .col-xs-12.col-sm-12.col-md-4!= partial('about/ie')
+            .col-xs-12.col-sm-12.col-md-4!= partial('about/ie-' + site.lang)
         .row.cv
-            .col-xs-12.col-sm-6.col-md-3!= partial('about/studied')
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/studied-' + site.lang)
             .col-xs-12.col-sm-6.col-md-3!= partial('about/jobs')
             .col-xs-12.col-sm-6.col-md-3!= partial('about/knowledges')
-            .col-xs-12.col-sm-6.col-md-3!= partial('about/hobbies')
+            .col-xs-12.col-sm-6.col-md-3!= partial('about/hobbies-' + site.lang)
