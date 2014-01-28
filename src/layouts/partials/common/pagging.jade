@@ -1,0 +1,17 @@
+!= document.page.count
+
+unless document.page.count > 1
+    ul.pagination
+        unless hasPrevPage()
+            li.disabled: a(href="") Вперед
+        else
+            li: a(href=getPrevPage()) Вперед
+        for (var i = 0; i<document.page.count; i++)
+            unless document.page.number == i
+                li.active: span!= i + 1
+            else
+                li: a(href=getPageUrl(i))!= i + 1
+        unless hasNextPage()
+            li.disabled: a(href="") Назад
+        else
+            li: a(href=getNextPage()) Назад

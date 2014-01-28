@@ -1,0 +1,37 @@
+---
+title: 'Logbook / Blog'
+anchor: 'Blog'
+layout: 'blogpage'
+isPaged: true
+pagedCollection: 'posts'
+pageSize: 5
+---
+
+each post in getPageCollection('posts').toJSON()
+    article.post
+        h2: a(href=post.url)!= rtt(post.anchor)
+            if (post.tags)
+                ul.list-unstyled.list-inline.tags
+                    each tag in post.tags
+                        li: a(href!=getTagUrl(tag))!= rtt(tag)
+        .intro!= rt(cuttedContent(post.contentRenderedWithoutLayouts))
+        if hasReadMore(post.contentRenderedWithoutLayouts)
+            a.more(href= post.url) Read more...
+        .info
+            time(pubdate, datetime=post.date)= pubDate(post.date)
+
+if document.page.count > 1
+    ul.pagination
+        unless hasPrevPage()
+            li.disabled: a(href="") Newer
+        else
+            li: a(href=getPrevPage()) Newer
+        - for (var i = 0; i<document.page.count; i++)
+            - if (document.page.number == i)
+                li.active: span!= i + 1
+            else
+                li: a(href=getPageUrl(i))!= i + 1
+        unless hasNextPage()
+            li.disabled: a(href="") Older
+        else
+            li: a(href=getNextPage()) Older

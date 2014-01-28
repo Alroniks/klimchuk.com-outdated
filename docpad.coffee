@@ -79,7 +79,7 @@ docpadConfig = {
                     keywords: 'nothing'
                     author: 'Ivan Klimchuk <ivan@klimchuk.com>'
                     transLang: 'ru'
-                    transUrl: 'http://klimchuk.com'
+                    transUrl: 'http://klimchuk.by'
                     bezumkinru: 'Vasily Naumkin'
                     grinchikru: 'Victor Grinchik'
                     shevkocom: 'Valentin Shevko'

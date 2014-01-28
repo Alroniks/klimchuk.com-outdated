@@ -3,8 +3,8 @@
         .row
             .col-xs-12
                 h2.section-header 
-                    span Обновления блога
-                    a.btn.btn-sm.btn-info(href="/blog.html") Читать блог
+                    span!= rtt(__({ru:'Обновления блога', en:'Blog Updates'}))
+                    a.btn.btn-sm.btn-info(href="/blog.html")!= __({ru:'Читать блог', en:'Read the Blog'})
                     //- a.btn.btn-sm.btn-success(href="#") Предложить тему
 
                 for post in getCollection('posts').toJSON().slice(0,3)

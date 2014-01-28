@@ -13,12 +13,12 @@ header
                             case site.lang
                                 when 'ru'
                                     a(href=site.transUrl)
-                                        span.active!= site.lang
                                         span!= site.transLang
+                                        span.active!= site.lang
                                 when 'en'
                                     a(href=site.transUrl)
-                                        span!= site.lang
-                                        span.active!= site.transLang
+                                        span.active!= site.lang
+                                        span!= site.transLang
                         .navbar-brand
                             a(href="/")!= rtt(site.title)
                         

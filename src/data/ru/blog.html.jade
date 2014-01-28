@@ -20,18 +20,18 @@ each post in getPageCollection('posts').toJSON()
         .info
             time(pubdate, datetime=post.date)= pubDate(post.date)
 
-- if (document.page.count > 1)
+if document.page.count > 1
     ul.pagination
         unless hasPrevPage()
-            li.disabled: a(href="") Вперед
+            li.disabled: a(href="") Новые
         else
-            li: a(href=getPrevPage()) Вперед
+            li: a(href=getPrevPage()) Новые
         - for (var i = 0; i<document.page.count; i++)
             - if (document.page.number == i)
                 li.active: span!= i + 1
-            - else
+            else
                 li: a(href=getPageUrl(i))!= i + 1
         unless hasNextPage()
-            li.disabled: a(href="") Назад
+            li.disabled: a(href="") Ранее
         else
-            li: a(href=getNextPage()) Назад
+            li: a(href=getNextPage()) Ранее
