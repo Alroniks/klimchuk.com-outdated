@@ -5,10 +5,15 @@ footer
 .copyright
     .container
         .row
-            .col-md-12
-                .pull-left!= site.copyright
-                ul.list-unstyled.list-inline.pull-right
+            .col-xs-12.col-md-4
+                != site.copyright
+                case site.lang
+                    when 'ru'
+                        include footer/license-ru
+                    when 'en'
+                        include footer/license-en
+            .col-xs-12.col-md-4.col-md-offset-4
+                ul.list-unstyled.list-inline
                     li: a(href="http://gruntjs.com")
                         img(src="https://cdn.gruntjs.com/builtwith.png", alt="Built with Grunt")
                     li: a(href="/sitemap.html")!= __({ru:'Карта сайта', en:'Sitemap'})
-                    
