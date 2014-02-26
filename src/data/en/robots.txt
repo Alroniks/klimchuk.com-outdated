@@ -1,0 +1,4 @@
+User-agent: *
+
+Host: klimchuk.com
+Sitemap: http://klimchuk.com/sitemap.xml

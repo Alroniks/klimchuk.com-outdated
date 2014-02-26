@@ -130,6 +130,11 @@ docpadConfig = {
         rss:
             collection: 'posts'
             url: '/rss.xml'
+        sitemap:
+            cachetime: 600000 # one week approximately
+            changefreq: 'weekly'
+            priority: 0.5
+            filePath: 'sitemap.xml'
     events:
         generateBefore: (opts) ->
             lang = @docpad.config.env

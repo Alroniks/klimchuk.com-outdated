@@ -3,7 +3,13 @@
   "version": "0.2.0",
   "description": "",
   "homepage": "http://klimchuk.com",
-  "keywords": ["Ivan","Klimchuk","Ivan Klimchuk","personal site","homepage"],
+  "keywords": [
+    "Ivan",
+    "Klimchuk",
+    "Ivan Klimchuk",
+    "personal site",
+    "homepage"
+  ],
   "author": "Ivan klimchuk <ivan@klimchuk.com> (http://klimchuk.com)",
   "bugs": {
     "url": "https://github.com/Alroniks/site-klimchukcom/issues"
@@ -27,6 +33,7 @@
     "docpad-plugin-tagcloud": "~2.0.0",
     "docpad-plugin-jade": "~2.6.2",
     "docpad-plugin-related": "~2.2.2",
+    "docpad-plugin-sitemap": "~2.2.0",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-copy": "~0.5.0",
