@@ -3,5 +3,8 @@
         .row
             .col-xs-12
                 figure
-                    figcaption.pull-left: a(href="https://twitter.com/iklimchuk", target="_blank") @iklimchuk 
-                    blockquote Данные не могут быть получены.
+                    div.loader
+                        img(src="/img/twitter-loader.gif")
+                    div.tweet(style="display:none;")
+                        figcaption.pull-left: a(href="https://twitter.com/iklimchuk", target="_blank") @iklimchuk 
+                        blockquote(id="tweet")
