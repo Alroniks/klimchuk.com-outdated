@@ -127,6 +127,9 @@ docpadConfig = {
                 "Посты с тегом " + tag
         related:
             parentCollectionName: "posts"
+        rss:
+            collection: 'posts'
+            url: '/rss.xml'
     events:
         generateBefore: (opts) ->
             lang = @docpad.config.env
