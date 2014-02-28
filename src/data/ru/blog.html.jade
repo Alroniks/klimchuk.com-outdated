@@ -9,7 +9,8 @@ pageSize: 5
 
 each post in getPageCollection('posts').toJSON()
     article.post
-        h2: a(href=post.url)!= rtt(post.anchor)
+        h2
+            a(href=post.url)!= rtt(post.anchor)
             if (post.tags)
                 ul.list-unstyled.list-inline.tags
                     each tag in post.tags
