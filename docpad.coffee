@@ -85,6 +85,7 @@ docpadConfig = {
                     thrashme: 'Ryan Thrash'
                     markhamstracom: 'Mark Hamstra'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. All right reserved.'
+                    disqusShortname: 'klimchukcom'
 
         ru:
             documentsPaths: ['data/ru']
@@ -106,6 +107,7 @@ docpadConfig = {
                     thrashme: 'Райан Трэш'
                     markhamstracom: 'Марк Хамстра'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. Все права защищены.'
+                    disqusShortname: 'klimchukby'
     plugins:
         highlightjs:
             aliases:
