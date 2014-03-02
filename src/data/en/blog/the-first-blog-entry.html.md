@@ -8,6 +8,8 @@ tags:
     - Closet
 ---
 
+![](/images/the-first-blog-entry/1.jpg)
+
 Good day, dear users.
 
 I want to start a blog by this post.

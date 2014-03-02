@@ -3,13 +3,12 @@ title: 'Developing an Extras in MODx: configuring of the environment'
 anchor: 'Developing an Extras in MODx: configuring of the environment'
 keywords: modx, extra, developing, configuration, environment, настройка окружения, разработка
 date: Jun 18, 2013
-layout: 'default'
-isPaged: true
+layout: 'blogpost'
 tags:
     - Closet
 ---
 
-__Hi, colleagues!__
+![](/images/modx-development/1.png)
 
 Some days ago I did have some free minutes and I started develop a new Extra for MODx Revolution. Results you will see later. But now I talk as about I configured my development environment for the comfortable developing and for simple assembly and deploying packages for MODx.
 
