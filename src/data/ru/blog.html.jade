@@ -14,7 +14,7 @@ each post in getPageCollection('posts').toJSON()
             if (post.tags)
                 ul.list-unstyled.list-inline.tags
                     each tag in post.tags
-                        li: a(href!=getTagUrl(tag))!= rtt(tag)
+                        li: a(href!=getTagUrl(tag))!= rtt(translateTag(tag))
         .intro!= rt(cuttedContent(post.contentRenderedWithoutLayouts))
         if hasReadMore(post.contentRenderedWithoutLayouts)
             a.more(href= post.url) Читать далее...

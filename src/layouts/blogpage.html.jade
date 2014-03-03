@@ -11,7 +11,7 @@ aside
     ul.list-unstyled.list-inline.tagscloud
         for tag in getTagCloud()
             li
-                a(href=tag.url)!= rtt(tag.tag)
+                a(href=tag.url)!= rtt(translateTag(tag.tag))
                 sup= tag.count
 
 != content

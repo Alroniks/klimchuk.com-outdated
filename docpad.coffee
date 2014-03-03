@@ -44,6 +44,8 @@ docpadConfig = {
             return doc?.get('url') or ''
         getPostsForTag: (tag) ->
             return @getCollection('posts').findAll(tags: $has: tag)
+        translateTag: (tag) ->
+            return @site.tags[tag.toLowerCase().replace(' ','')] or tag
         __: (s) ->
             s[@site.lang] or '__ALERT__'
 
@@ -86,7 +88,10 @@ docpadConfig = {
                     markhamstracom: 'Mark Hamstra'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. All right reserved.'
                     disqusShortname: 'klimchukcom'
-
+                    tags:
+                        closet: 'Closet'
+                        modx: 'MODX'
+                        personallife: 'Personal life'
         ru:
             documentsPaths: ['data/ru']
             outPath: 'out/ru'
@@ -108,6 +113,10 @@ docpadConfig = {
                     markhamstracom: 'Марк Хамстра'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. Все права защищены.'
                     disqusShortname: 'klimchukby'
+                    tags:
+                        closet: 'Чулан'
+                        modx: 'MODX'
+                        personallife: 'Личная жизнь'
     plugins:
         highlightjs:
             aliases:
