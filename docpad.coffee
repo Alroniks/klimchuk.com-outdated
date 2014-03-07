@@ -92,6 +92,7 @@ docpadConfig = {
                         closet: 'Closet'
                         modx: 'MODX'
                         personallife: 'Personal life'
+                        development: 'Development'
         ru:
             documentsPaths: ['data/ru']
             outPath: 'out/ru'
@@ -117,6 +118,7 @@ docpadConfig = {
                         closet: 'Чулан'
                         modx: 'MODX'
                         personallife: 'Личная жизнь'
+                        development: 'Разработка'
     plugins:
         highlightjs:
             aliases:
