@@ -16,10 +16,12 @@ node_modules/docpad/bin/docpad generate --env en --out /var/www/com/klimchuk/www
 [deployru]
 git checkout master
 git pull
-rm -rf /var/www/by/klimchuk/www
+rm -rf /var/www/by/klimchuk/new
 node_modules/docpad/bin/docpad clean
 node_modules/grunt-cli/bin/grunt prepare
-node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/www/
+node_modules/docpad/bin/docpad generate --env ru --out /var/www/by/klimchuk/new
+rm -rf /var/www/by/klimchuk/www
+mv /var/www/by/klimchuk/new /var/www/by/klimchuk/www 
 
 [deployen]
 git checkout master
