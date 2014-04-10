@@ -5,7 +5,7 @@ keywords: 23, день рождения, декабрь, семнадцать, 1
 date: Dec 16, 2011
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 23 года это много или мало?
