@@ -12,11 +12,11 @@
   ],
   "author": "Ivan klimchuk <ivan@klimchuk.com> (http://klimchuk.com)",
   "bugs": {
-    "url": "https://github.com/Alroniks/site-klimchukcom/issues"
+    "url": "https://github.com/Alroniks/klimchuk.com/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alroniks/site-klimchukcom"
+    "url": "https://github.com/Alroniks/klimchuk.com"
   },
   "engines": {
     "node": "0.10.x",
