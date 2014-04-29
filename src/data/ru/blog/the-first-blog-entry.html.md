@@ -5,7 +5,7 @@ keywords:
 date: May 30, 2010
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 Доброго времени суток, уважаемые пользователи.

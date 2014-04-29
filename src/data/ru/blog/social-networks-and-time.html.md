@@ -5,7 +5,7 @@ keywords: twitter, iklimchuk, facebook, вконтакте, социальные
 date: Dec 09, 2011
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 На текущий момент я удалил акаунты из Twitter, Facebook и Вконтакте. Почему - ниже кратко объясню.

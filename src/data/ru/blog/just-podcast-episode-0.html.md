@@ -5,7 +5,7 @@ keywords: личное, работа, универ, велосипед, подк
 date: Jul 07, 2011
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ### Шоу-ноты

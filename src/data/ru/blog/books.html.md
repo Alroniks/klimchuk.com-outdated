@@ -5,7 +5,7 @@ keywords: книги, bookmate, чтение, электронные книги,
 date: Dec 24, 2011
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ![](/images/books/1.jpg)

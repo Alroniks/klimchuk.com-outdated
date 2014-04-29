@@ -5,7 +5,7 @@ keywords:
 date: Jun 12, 2010
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ### Вместо предисловия

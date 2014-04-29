@@ -5,7 +5,7 @@ keywords: css, naked day, html, 9, april, апрель, 9 апреля, без c
 date: Apr 09, 2011
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 9 апреля во всем мире проводится день без CSS - CSS Naked Day. Web-мастера отключают на своих сайтах весь css и показывают свой сайт голым, т.е. только верстка в html, без какого-либо оформления.

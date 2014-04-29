@@ -5,8 +5,8 @@ keywords:
 date: Sep 15, 2013
 layout: 'blogpost'
 tags:
-    - Closet
-    - Personal life
+    - closet
+    - personallife
 ---
 
 ![](/images/automatism/1.jpg)

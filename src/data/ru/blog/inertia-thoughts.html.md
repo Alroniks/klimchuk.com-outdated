@@ -5,7 +5,7 @@ keywords: психология, мысли, инерция, думайте, но
 date: Jan 15, 2012
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ![](/images/inertia-thoughts/1.jpg)

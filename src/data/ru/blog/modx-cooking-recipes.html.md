@@ -5,8 +5,8 @@ keywords: рецепты, приготовление, modx, revolution, Иван
 date: Sep 06, 2011
 layout: 'blogpost'
 tags:
-    - Closet
-    - MODX
+    - closet
+    - modx
 ---
 
 Выкладываю видео своего выступления. Хоть и с опозданием большим, но для порядку нужно, чтобы оно тут было.

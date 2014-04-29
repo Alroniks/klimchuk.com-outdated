@@ -5,7 +5,7 @@ keywords: meetupby, RPMM, Минск, конференции
 date: Nov 21, 2010
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 > "В споре рождается истина" 
