@@ -12,11 +12,11 @@ header
                         .language
                             case site.lang
                                 when 'ru'
-                                    a(href=site.transUrl)
+                                    a(href=site.transUrl + (document.url != '/index.html' ? document.url : ''))
                                         span!= site.transLang
                                         span.active!= site.lang
                                 when 'en'
-                                    a(href=site.transUrl)
+                                    a(href=site.transUrl + (document.url != '/index.html' ? document.url : ''))
                                         span.active!= site.lang
                                         span!= site.transLang
                         .navbar-brand
