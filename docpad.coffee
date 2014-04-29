@@ -52,7 +52,7 @@ docpadConfig = {
     collections:
         posts: (database) ->
             database.findAllLive(
-                {relativeOutDirPath: 'blog'}, 
+                {relativeOutDirPath: 'blog', isDraft: $ne: true}, 
                 [date:-1]
             )
         clients: (database) ->

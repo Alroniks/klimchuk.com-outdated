@@ -4,6 +4,7 @@ anchor: 'MODX разработка с Vagrant, особенности окруж
 keywords: modx, vagrant, cmp, разработка modx, modx + vagrant, cmp modx vagrant
 date: Apr 10, 2014
 layout: 'blogpost'
+isDraft: true
 tags:
     - modx
     - development
