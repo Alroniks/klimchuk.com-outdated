@@ -5,7 +5,7 @@ keywords:
 date: Jan 1, 2014
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ![](/images/the-first-blog-entry/1.jpg)

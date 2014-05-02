@@ -142,9 +142,10 @@ docpadConfig = {
                 "Посты с тегом " + tag
         related:
             parentCollectionName: "posts"
-        rss:
-            collection: 'posts'
-            url: '/rss.xml'
+        rss: 
+            default:
+                collection: 'posts'
+                url: '/rss.xml'
         sitemap:
             cachetime: 600000 # one week approximately
             changefreq: 'weekly'

@@ -5,7 +5,7 @@ keywords: modx, extra, developing, configuration, environment, настройк�
 date: Jun 18, 2013
 layout: 'blogpost'
 tags:
-    - Closet
+    - closet
 ---
 
 ![](/images/modx-development/1.png)
