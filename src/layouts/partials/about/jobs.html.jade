@@ -1,17 +1,17 @@
 h3!= rtt(__({ru:'Сейчас работаю, работал ранее', en:'Current job, past positions'}))
 ul
     li.current
+        h4!= __({ru:'Владелец', en:'Owner'})
+            small!= __({ru:'с июля 2014', en:'from Jule 2014'})
+        a(href="http://alroniks.com", target="_blank") Alroniks Experts
+    li
         h4!= __({ru:'PHP программист', en:'PHP Developer'})
-            small!= __({ru:'с апреля 2013', en:'from April 2013'})
+            small!= __({ru:'Апрель 2013 - Июнь 2014', en:'April 2013 – June 2014'})
         a(href="http://onliner.by", rel="nofollow", target="_blank") Onliner.by
     li
         h4!= __({ru:'Руководитель отдела серверной разработки', en:'Head of server-based development'})
             small!= __({ru:'Август 2011 – Апрель 2013', en:'August 2011 – April 2013'}) 
         a(href="http://lovata.com", rel="nofollow", target="_blank") LOVATA Group
-    li
-        h4!= __({ru:'Веб-технолог', en:'WEB Developer'})
-            small!= __({ru:'Февраль 2011 – Сентябрь 2011', en:'February 2011 – September 2011'})
-        a(href="http://hh.ru", rel="nofollow", target="_blank") HeadHunter
     case site.lang
         when 'ru'
             a(href="http://ivan-klimchuk.moikrug.ru", target="_blank") Подробнее на моем круге

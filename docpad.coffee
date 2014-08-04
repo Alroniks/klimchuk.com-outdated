@@ -40,7 +40,7 @@ docpadConfig = {
         rtt: (s) ->
             s and (richtypo.title s)
         getTagUrl: (tag) ->
-            doc = docpad.getFile({tag:tag})
+            doc = this.getFile({tag:tag})
             return doc?.get('url') or ''
         getPostsForTag: (tag) ->
             return @getCollection('posts').findAll(tags: $has: tag)
@@ -88,6 +88,7 @@ docpadConfig = {
                     markhamstracom: 'Mark Hamstra'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. All right reserved.'
                     disqusShortname: 'klimchukcom'
+                    postsWithTag: 'Entries tagged with %tag'
                     tags:
                         closet: 'Closet'
                         modx: 'MODX'
@@ -115,6 +116,7 @@ docpadConfig = {
                     markhamstracom: 'Марк Хамстра'
                     copyright: '&copy; 2010 &mdash; ' + (new Date()).getFullYear() + '. Все права защищены.'
                     disqusShortname: 'klimchukby'
+                    postsWithTag: 'Записи с тегом %tag'
                     tags:
                         closet: 'Чулан'
                         modx: 'MODX'
@@ -137,15 +139,16 @@ docpadConfig = {
                 document.setMeta(
                     layout: 'innerpage'
                     data: "!=partial('tag')"
+                    title: this.docpad.config.templateData.site.postsWithTag.replace(
+                        '%tag', 
+                        this.docpad.config.templateData.site.tags[document.attributes.tag]
+                    )
                 )
-            title: (tag) ->
-                "Посты с тегом " + tag
         related:
             parentCollectionName: "posts"
-        rss: 
-            default:
-                collection: 'posts'
-                url: '/rss.xml'
+        rss:        
+            collection: 'posts'
+            url: '/rss.xml'
         sitemap:
             cachetime: 600000 # one week approximately
             changefreq: 'weekly'

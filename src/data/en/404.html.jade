@@ -1,0 +1,29 @@
+---
+title: Oops! This page is not found
+layout: 'innerpage'
+---
+
+h1 Oops! This page was not found on my website.
+
+h3 I'm so sorry, but something went wrong. 
+
+p Apparently you entered the wrong address, and it turned out that on my site this page is not exist. I'm very sorry that it is not exist.
+
+h3 But everything can be solved
+
+p I have a blog where I share my thoughts and ideas. 
+    a(href="/blog.html") Here collected all entries.
+
+p And here recently wrote in blog
+
+ul.list-unstyled
+    each post in getPageCollection('posts').toJSON().slice(0,5)
+        li: a(href!= post.url)!= rtt(post.title)
+
+p If you want to know more about me or contact me, have a page with my biography and contacts.
+    a(href="/about.html") It is at this link.
+
+p I hope you find that you looked for.
+
+h2 Have a nice day!
+    

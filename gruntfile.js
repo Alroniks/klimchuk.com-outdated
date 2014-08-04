@@ -57,7 +57,7 @@ module.exports = function(grunt){
       jquery: {
         files: [{
           cwd: 'bower_components/jquery/',
-          src: ['jquery.min.js'],
+          src: ['jquery.min.js','jquery.min.map'],
           dest: 'src/files/vendor/jquery/',
           expand: true
         }]
