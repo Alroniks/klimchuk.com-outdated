@@ -15,7 +15,7 @@
         ul.list-unstyled
             for tag in getTagCloud()
                 li: a(href=tag.url)!= rtt(translateTag(tag.tag))
-                    sup= tag.count
+                    sup= getPostsForTag(tag).length
     .col-xs-12.col-sm-4.col-sm-offset-2.col-md-2.col-md-offset-0
         h3!= rtt(__({ru:'Читаю', en:'I am read'}))
         ul.list-unstyled

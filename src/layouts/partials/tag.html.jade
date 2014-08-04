@@ -8,7 +8,7 @@ aside
         for tag in getTagCloud()
             li
                 a(href=tag.url)!= rtt(translateTag(tag.tag))
-                sup= tag.count
+                sup= getPostsForTag(tag).length
 
 for post in posts.toJSON()
     article.post
