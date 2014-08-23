@@ -16,4 +16,10 @@ aside
 
 != content
 
+.social-likes
+    .vkontakte!= __({ru:'Вконтакте',en:'vk.com'})
+    .twitter(data-related="@iklimchuk")!= __({ru:'Твитер',en:'Twitter'})
+    .facebook!= __({ru:'Фейсбук',en:'Facebook'})
+    .plusone!= __({ru:'Гугл+',en:'Google+'})
+
 != partial('blog/disqus')
