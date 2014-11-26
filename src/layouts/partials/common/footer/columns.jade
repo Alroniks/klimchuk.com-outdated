@@ -1,15 +1,32 @@
 .row
     .col-xs-12.col-sm-4.col-md-2
-        h3 
         h3!= rtt(__({ru:'Для клиентов', en:'For Clients'}))
-        p!= __({ru:'Скоро все будет.', en:'Comming soon.'})
         ul.list-unstyled.clients
-            //- each page in getCollection("clients").toJSON()
-                //- li: a(href=page.url)= rtt(page.anchor)
+            li
+                a(href="http://alroniks.com", target="_blank")= __({ru:'Разработка на MODX', en:'MODX Development'})
+                p.details= __({ru:'интернет-магазины, сайты', en:'e-commerce, websites'})
+                p.price= __({ru:'от 500$', en:'from 500$'})
+            li 
+                a(href="http://alroniks.com", target="_blank")= __({ru:'Техподдержка', en:'Support'})
+                p.details= __({ru:'техническая поддержка решений на MODX и не только', en:'technical support of MODX solutions and others'})
+                p.price= __({ru:'от 20$/час', en:'from 20$/h'})     
+            li 
+                a(href="http://alroniks.com", target="_blank")= __({ru:'MODX дополнения', en:'MODX Addons'})
+                p.details= __({ru:'разработка модулей под заказ', en:'development of custom addons'})
+                p.price= __({ru:'от 150$', en:'from 150$'})
+            
     .col-xs-12.col-sm-4.col-md-3
         h3!= rtt(__({ru:'Текущие проекты', en:'Recent Projects'}))
-        p!= __({ru:'Скоро все будет.', en:'Comming soon.'})
-        ul.list-unstyled
+        ul.list-unstyled.projects
+            li
+                a(href="https://store.simpledream.ru/packages/ecommerce/mspwebpay.html", target="_blank") mspWebPay
+                p.details= __({ru:'Метод оплаты заказов miniShop2 через WebPay', en:'Method of payment miniShop2 orders through WebPay'})
+            li
+                a(href="https://store.simpledream.ru/packages/ecommerce/mspassistbelarus.html", target="_blank") mspAssistBelarus
+                p.details= __({ru:'Метод оплаты заказов miniShop2 через Assist Belarus', en:'Method of payment miniShop2 orders through Assist Belarus'})
+            li
+                a(href="https://store.simpledream.ru/packages/ecommerce/msppayu.html", target="_blank") mspPayU
+                p.details= __({ru:'Оплата заказов miniShop2 через платежный сервис PayU', en:'Method of payment miniShop2 orders through paygate PayU'})
     .col-xs-12.col-sm-4.col-md-2
         h3!= rtt(__({ru:'Рубрики блога', en:'Blog Headings'}))
         ul.list-unstyled
@@ -23,7 +40,6 @@
             li: a(href="http://grinchik.ru", target="_blank")!= rtt(site.grinchikru)
             li: a(href="http://thrash.me", target="_blank")!= rtt(site.thrashme)
             li: a(href="http://markhamstra.com", target="_blank")!= rtt(site.markhamstracom)
-            li: a(href="http://shevko.com", target="_blank")!= rtt(site.shevkocom)
     .col-xs-12.col-sm-6.col-md-3
         h3!= rtt(__({ru:'Быстрая связь', en:'Fast Contacts'}))
         ul.list-unstyled
