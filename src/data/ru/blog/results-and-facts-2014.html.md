@@ -24,7 +24,7 @@ tags:
 
 &mdash; Организовал и провел свой первый и первый в Беларуси [MODX Meetup](http://modxby.timepad.ru/event/130653/).
 
-&mdash; Написал и выпустил 3 компонента для MODX для приема плетежей: [mspWebPay](https://store.simpledream.ru/packages/ecommerce/mspwebpay.html), [mspAssistBelarus](https://store.simpledream.ru/packages/ecommerce/mspassistbelarus.html), [mspPayU](https://store.simpledream.ru/packages/ecommerce/msppayu.html)
+&mdash; Написал и выпустил 3 компонента для MODX для приема платежей: [mspWebPay](https://store.simpledream.ru/packages/ecommerce/mspwebpay.html), [mspAssistBelarus](https://store.simpledream.ru/packages/ecommerce/mspassistbelarus.html), [mspPayU](https://store.simpledream.ru/packages/ecommerce/msppayu.html)
 
 &mdash; Впервые [побывал в Болгарии](https://vk.com/album3538967_202846882), был там в отпуске.
 
